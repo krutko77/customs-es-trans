@@ -1,0 +1,142 @@
+// prices
+.prices {
+
+   &__wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+   }
+
+   &__title {
+
+      &::after {
+         left: 1%;
+      }
+   }   
+}
+
+.grid-prices {
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr 1fr;
+   gap: 40px;
+
+   @media (max-width: $pc) {
+      gap: calc(20px + 20*((100vw - 992px) / (1260 - 992)));
+   }
+
+   @media (max-width:$tablet) {
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+   }
+
+   @media (max-width:$mobileSmall) {
+      grid-template-columns: 1fr;
+      gap: 20px;
+   }
+
+   @media (any-hover: hover) {
+      &__item--1._watcher-view {
+         opacity: 1;
+         transform: translateY(0);
+         transition: transform 0.7s ease 0s, opacity 0.7s ease 0s;
+      }
+
+      &__item--2._watcher-view {
+         opacity: 1;
+         transform: translateY(0);
+         transition: transform 0.7s ease 0.2s, opacity 0.7s ease 0.2s;
+      }
+
+      &__item--3._watcher-view {
+         opacity: 1;
+         transform: translateY(0);
+         transition: transform 0.7s ease 0.4s, opacity 0.7s ease 0.4s;
+      }
+
+      &__item--4._watcher-view {
+         opacity: 1;
+         transform: translateY(0);
+         transition: transform 0.7s ease 0.6s, opacity 0.7s ease 0.6s;
+      }
+   }
+}
+
+.card {
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   background-color: $mainLightColor;
+   min-height: 290px;
+   padding: toEm(30, 20) toEm(30, 20);
+   border-radius: 5px;
+
+   @media (any-hover: hover) {
+      opacity: 0;
+      transform: translateY(100px);
+   }
+
+   &__img-wrapper {
+		width: fit-content;      
+		aspect-ratio: 67/64;
+		overflow: hidden;
+		margin-bottom: toEm(15, 20);
+   }
+
+   &__icons {
+      width: 67px;
+      height: 64px;
+   }
+
+   &__title {
+      margin-bottom: toEm(5, 20);
+   }
+
+   &__text,
+   &__link {
+      font-size: toRem(16);
+      line-height: math.div(20, 16);
+
+      @media (max-width: $pc) {
+         font-size: calc(15px + 1*((100vw - 320px) / (1260 - 320)));
+      }
+   }
+
+   &__text {
+      margin-bottom: toEm(10, 20);
+   }
+
+   &__wrapper-link {
+      text-align: center;
+   }
+
+   &__link {
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 1.1px;
+      margin-bottom: toEm(30, 20);
+   }
+
+   &__price {
+      font-size: toRem(24);
+
+      @media (max-width: $pc) {
+         font-size: calc(22px + 2*((100vw - 320px) / (1260 - 320)));
+      }
+   }
+
+   &__price-color {
+      color: $accentColor;
+   }
+}
+
+.grid-prices-2 .card {
+
+	&__img-wrapper {
+		aspect-ratio: 64/64;		
+   }
+
+   &__icons {
+      width: 64px;
+      height: 64px;
+   }
+}

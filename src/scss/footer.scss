@@ -1,0 +1,165 @@
+//footer
+.footer {
+   padding: 20px 0;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   min-height: 90px;
+   background-color: $footerBgColor;
+
+   span {
+      font-weight: 500;
+   }
+
+   &__link {
+      text-transform: uppercase;
+      font-size: 14px;
+
+      @media (max-width: $pc) {
+         font-size: calc(12px + 2*((100vw - 320px) / (1260 - 320)));
+      }
+
+      display: inline-block;
+   }
+
+   &__content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+   }
+
+   &__list {
+      display: flex;
+
+      @media (max-width: $tablet) {
+         flex-direction: column;
+         align-items: center;
+      }
+
+   }
+
+   &__item:not(:last-child) {
+
+      @media (max-width: $tablet) {
+         margin-bottom: 10px;
+      }
+   }
+
+   &__item:not(:last-child):after {
+      content: "|";
+      margin: 0 0.4375em;
+      color: $mainColor;
+      font-weight: 700;
+
+      @media (max-width: $tablet) {
+         display: none;
+         margin-bottom: 15px;
+      }
+   }
+}
+
+.chatme {
+   display: flex;
+   justify-content: end;
+   position: fixed;
+   z-index: 9;
+   bottom: 50px;
+   right: 45px;
+   width: 82px;
+   height: 65px;
+   border-radius: 33px;
+
+   @media (max-width: $mobile) {
+      right: 25px;
+      bottom: 40px;
+   }
+
+   @media (max-width: $mobileSmall) {
+      right: 10px;
+      bottom: 30px;
+   }
+}
+
+.chatme__link {
+   position: absolute;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   z-index: 1;
+}
+
+.chatme__icon {
+   will-change: transform, opacity;
+   width: 65px;
+   height: 65px;
+   background-color: $secondButtonColor;
+   cursor: pointer;
+   outline: 0;
+   border: none;
+   border-radius: 50%;
+   transition: all .3s ease;
+   animation: pulse 1.6s infinite;
+}
+
+@keyframes pulse {
+   0% {
+      box-shadow: 0 0 0 0 rgba(0, 136, 204, .85);
+   }
+
+   70% {
+      box-shadow: 0 0 0 2em rgba(0, 136, 204, 0);
+   }
+
+   100% {
+      box-shadow: 0 0 0 0 rgba(0, 136, 204, 0);
+   }
+}
+
+.chatme__icon:before,
+.chatme__icon::after {
+   position: absolute;
+   display: block;
+   background-repeat: no-repeat;
+   transition: opacity .5s;
+}
+
+.chatme__icon:before {
+   content: "";
+   top: 0;
+   right: 0;
+   bottom: 0;
+   left: 0;
+   background-image: url("../img/icons/telegram-white-icon.svg");
+   background-size: 30px auto;
+   background-position: calc(50% - 1px) calc(50% + 1px);
+   opacity: 1;
+}
+
+.chatme__icon::after {
+   content: "ЗАДАТЬ ВОПРОС";
+   color: $mainBgColor;
+   top: 19px;
+   right: 0;
+   opacity: 0;
+   font-size: 11px;
+   text-align: center;
+   line-height: 120%;
+}
+
+@media (any-hover: hover) {
+
+   .chatme__icon:active,
+   .chatme__icon:hover {
+      background-color: #0073ad;
+      animation: none;
+   }
+
+   .chatme__icon:hover::before {
+      opacity: 0;
+   }
+
+   .chatme__icon:hover::after {
+      opacity: 1;
+   }
+}

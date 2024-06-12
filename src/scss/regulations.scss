@@ -1,0 +1,35 @@
+// regulations
+.policy, .contract, .soglashenie {
+   padding: 180px 0 110px;
+
+   @media (max-width:1500px) {
+      padding-top: calc(120px + 50*((100vw - 320px) / (1500 - 320)));
+      padding-bottom: calc(50px + 50*((100vw - 320px) / (1500 - 320)));
+   }
+
+	ul, ol {
+		padding-left: 25px;
+	}
+
+   ul li {
+      list-style-type: disc;
+   }
+
+	ol.padding-left {
+		padding-left: 5px;
+	}
+
+	.no-style {
+		list-style-type: none;
+	}
+
+	img {
+		width: 100%;
+		height: auto;
+		object-fit: cover;
+	}
+}
+
+.contract {
+	background-color: $mainLightColor;
+}

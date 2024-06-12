@@ -1,0 +1,38 @@
+// requirements
+.requirements {
+   &__list {
+      padding-left: toRem(19);
+   }
+
+   &__list li {
+      list-style-type: square;
+      margin-bottom: toEm(10, 20);
+   }
+
+   &__list li::marker {
+      color: $accentColor;
+   }
+
+   &__img-box,
+   &__img-box-1,
+   &__img-box-2 {
+      max-width: 400px;
+      overflow: hidden;
+   }
+
+   &__img-box {
+      aspect-ratio: 400/312;
+   }
+
+   &__img-box-1 {
+      aspect-ratio: 400/284;
+   }
+
+   &__img-box-2 {
+      aspect-ratio: 400/295;
+   }
+
+	&__text.center {
+		text-align: center;
+	}
+}

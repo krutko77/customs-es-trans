@@ -1,0 +1,95 @@
+	// contact
+.contact {
+	min-height: calc(100vh - 160px);
+
+	&__content {
+		display: flex;
+
+		@media (max-width: $tablet) {
+			flex-direction: column;
+		}
+	}
+
+	&__company,
+	&__map {
+		flex: 1 1 50%;
+	}
+
+	&__company {
+		padding-right: 10px;
+	}
+
+	.list {
+
+		&__item-wrapper {
+			display: inline-flex;
+			align-items: center;
+		}
+	
+		.location {
+			align-items: start;
+		}
+	
+		&__item-icon::before {
+			font-size: toEm(30, 20);
+			margin: 0 toEm(7, 20) 0px 0px;
+			color: $accentColor;
+		}
+	
+		&__item-icon-location::before {
+			margin: 0 toEm(9, 20) 0px toEm(2, 20);
+		}
+	}
+
+	&__social {
+		@media (max-width: $tablet) {
+			margin-bottom: 30px;
+		}
+	}
+
+	.icon {
+		width: 48px;
+		height: 48px;
+		opacity: 0.7;
+		transition: opacity 0.3s ease;
+	}
+
+	@media (any-hover: hover) {
+		.icon:hover {
+			opacity: 1;
+		}
+	}
+
+	@media (any-hover: none) {
+		.icon {
+			opacity: 1;
+		}
+	}
+	
+	&__link-icon:not(:last-child) {
+		margin-right: 20px;
+	}
+
+	&__map {
+		padding-left: 10px;
+
+		@media (max-width: $tablet) {
+			padding-left: 0;
+			max-width: 80%;
+			width: 100%;
+			align-self: center;
+		}
+
+		@media (max-width: $mobile) {
+			max-width: 100%;
+
+		}
+	}
+
+	iframe {
+		aspect-ratio: 580/400;
+		width: 100%;
+		height: auto;
+		border: none;
+	}
+}

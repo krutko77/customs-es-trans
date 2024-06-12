@@ -1,0 +1,28 @@
+// action-block
+.action-block {
+   padding: 0;
+   background: url("../img/bg-action-block-40.jpg") center / cover no-repeat;
+
+   &__wrapper {
+      color: $mainBgColor;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 350px;
+
+      @media (max-width: 1500px) {
+         min-height: calc(250px + 100*((100vw - 480px) / (1260 - 480)));
+      }
+   }
+
+   &__subtitle {
+      text-align: center;
+      margin-bottom: 40px;
+		text-shadow: 0 0 15px $mainColor;
+
+      @media (max-width: 1500px) {
+         margin-bottom: calc(30px + 5*((100vw - 480px) / (1260 - 480)));
+      }
+   }
+}

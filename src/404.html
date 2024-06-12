@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ru">
+	@@include('html/_head.htm',{
+	"title":"Ошибка!",
+	"description": "Ошибка 404"
+	})
+	<body>		
+		<div class="wrapper">
+			@@include('html/_header.htm',{})
+			<main class="page error-404 text">
+				<div class="error-404__container">
+					<div class="error-404__content">
+						<h1 class="error-404__title title">404</h1>
+						<p class="error-404__text">Извините, такой страницы у нас нет. Мы поможем найти нужную информацию.</p>
+						<a data-watch data-watch-once class="error-404__link" href="/">Перейти на главную</a>
+					</div>
+				</div>
+			</main>
+			@@include('html/_footer.htm',{})
+		</div>
+		<script src="js/app.min.js"></script>
+	</body>
+</html>

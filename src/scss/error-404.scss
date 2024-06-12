@@ -1,0 +1,51 @@
+// error-404
+
+.error-404 {
+   display: flex;
+   flex-direction: column;
+
+   &__container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex: 1 1 auto;
+   }
+
+   &__content {
+      text-align: center;
+   }
+
+
+   &__title {
+      color: $accentColor;
+      margin-bottom: toRem(50);
+      font-weight: 900;
+   }
+
+   &__link {
+      display: inline-block;
+      border-radius: 4px;
+      font-weight: 500;
+      color: $mainBgColor;
+      background-color: $accentColor;
+      padding: toEm(10, 18) toEm(46, 18) toEm(8, 18);
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      opacity: 0;
+      transform: scale(0.5);
+
+      &:hover {
+         background-color: $accentDarkColor;
+      }
+   }
+
+   &__link._watcher-view {
+      transition: color 0.3s, background-color 0.3s, transform 0.8s, opacity 0.8s;
+      opacity: 1;
+      transform: scale(1);
+   }
+}
+
+p.error-404__text {
+   margin-bottom: toRem(40);
+}

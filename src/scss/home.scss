@@ -1,0 +1,142 @@
+// home
+.home {
+   height: 100vh;
+   padding: 120px 0 70px;
+   background-image: url('./../img/bg-home-40-1.jpg');
+   background-size: cover;
+   background-position: bottom right;
+   width: 100%;
+   aspect-ratio: 16/9;
+   color: $mainBgColor;
+
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: flex-end;
+
+   @media (max-width:$mobileSmall) {
+      padding: 50px 0 70px;
+      background-image: url('./../img/bg-home-480-50.jpg');
+   }
+
+   &__container {
+      width: 100%;
+   }
+
+   &__content {
+      text-transform: uppercase;
+   }
+
+   &__title {
+      font-size: toRem(80);
+      text-align: left;
+      margin-bottom: 0;
+      opacity: 0;
+      transform: translateY(50px);
+      text-shadow: 0 0 5px $mainColor;
+
+      @media (max-width:1500px) {
+         font-size: calc(toRem(45) + 25*((100vw - 320px) / (1500 - 320)));
+      }
+   }
+
+   &__title._watcher-view {
+      opacity: 1;
+      transform: translateY(0);
+      transition: transform 1.3s ease 0s, opacity 1.3s ease 0s;
+   }
+
+   &__label {
+      font-size: toRem(40);
+      font-weight: 900;
+      line-height: math.div(60, 50);
+      margin-bottom: toEm(40, 40);
+      opacity: 0;
+      transform: translateY(50px);
+      text-shadow: 0 0 5px $mainColor;
+
+      @media (max-width:1500px) {
+         font-size: calc(toRem(20) + 10*((100vw - 320px) / (1500 - 320)));
+      }
+
+      @media (max-width:$tablet) {
+         margin-bottom: 60px;
+      }
+
+      @media (max-width:$mobile) {
+         margin-bottom: 50px;
+      }
+
+		@media (max-width:$mobile) {
+         margin-bottom: 30px;
+      }
+   }
+
+   &__label._watcher-view {
+      opacity: 1;
+      transform: translateY(0);
+      transition: transform 1.2s ease 0.4s, opacity 1.2s ease 0.4s;
+   }
+
+   &__offer-wrap {
+      max-width: 750px;
+   }
+
+   &__icons {
+      position: relative;
+      top: -1px;
+      flex-shrink: 0;
+      height: 30px;
+      width: 30px;
+      margin-right: 4px;
+      fill: $accentColor;
+
+      @media (max-width: $tablet) {
+         height: 27px;
+         width: 27px;
+         top: -2px;
+      }
+
+      @media (max-width: $mobile) {
+         height: 25px;
+         width: 25px;
+         top: -5px;
+         margin-right: 3px;
+      }
+   }
+
+   &__action {
+      text-align: center;
+      font-weight: 500;
+   }
+
+	.list {
+		&__item {
+			display: flex;
+			margin-bottom: toEm(35, 25);
+
+			@media (max-width: $mobile) {
+				margin-bottom: 20px;
+			}
+	
+			p {
+				text-transform: uppercase;
+				font-size: 25px;
+				font-weight: 500;
+				line-height: 1.2;
+				text-shadow: 0 0 15px $mainColor;
+	
+				@media (max-width:1500px) {
+					font-size: calc(toRem(17) + 2*((100vw - 320px) / (1500 - 320)));
+				}
+				
+			}
+		}
+	}
+	
+}
+
+
+.preload {
+   transition: none !important;
+}

@@ -1,0 +1,8 @@
+// header-back
+.header-back .social__item:last-child {
+   margin-right: 30px;
+
+   @media (max-width:$mobileSmall) {
+      margin-right: 0;
+   }
+}

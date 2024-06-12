@@ -1,0 +1,55 @@
+
+// checkbox.scss
+.checkbox {
+	position: relative;
+	&:not(:last-child) {
+		margin-bottom: toEm(5);
+	}
+	// .checkbox__input
+	&__input {
+		position: absolute;
+		width: 0;
+		height: 0;
+		opacity: 0;
+		&:focus + .checkbox__label:before {
+			box-shadow: 0 0 5px rgba(34, 60, 80, 0.4);
+		}
+	
+		&:checked + .checkbox__label:after {
+			transform: scale(1);
+		}
+	}
+	// .checkbox__label
+	&__label {
+		cursor: pointer;
+		display: inline-flex;
+		align-items: center;
+		position: relative;
+		gap: 10px;
+		&:before {
+			content: "";
+			align-self: flex-start;
+			flex: 0 0 20px;
+			width: 20px;
+			height: 20px;
+			border-radius: 3px;
+			border: 1px solid #a7a9ac;
+		}
+		&:after {
+			content: "";
+			transition: all 0.3s ease 0s;
+			transform: scale(0);
+			width: 10px;
+			height: 10px;
+			background-color: $accentColor;
+			border-radius: 2px;
+			position: absolute;
+			left: 5px;
+			top: 5px;
+		}
+	}	
+}
+
+.checkbox._form-error .checkbox__label:before {
+	box-shadow: 0 0 6px $errorColor;
+}

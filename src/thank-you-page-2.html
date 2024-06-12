@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/_head.htm',{
+"title":"ЕС Транс | Благодарим вас!",
+"description": "Страница благодарности"
+})
+
+<body>
+	<!-- Google Tag Manager (noscript) -->
+	
+	<!-- End Google Tag Manager (noscript) -->
+	<div class="wrapper">
+		@@include('html/_header.htm',{})
+		<main class="page thank text">
+			<div class="thank__content">
+				<div data-watch data-watch-once class="thank__img-wrap">
+					<img class="thank__img" src="@img/tick-mark.png" alt="галочка на зеленом круге">
+				</div>
+				<h2 class="thank__title title">Спасибо!<br>Сообщение отправлено.</h2>
+				<h4 class="thank__text">Мы пришлём сообщение на ваш e-mail<br>в ближайшее время.</h4>
+			</div>
+		</main>
+		<script>
+			setTimeout('location.replace("https://sales-manager.es-trans.ru")', 4000);
+		</script>
+		@@include('html/_footer.htm',{})
+	</div>
+	<script src="js/app.min.js"></script>
+</body>
+
+</html>
