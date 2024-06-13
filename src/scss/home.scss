@@ -15,7 +15,7 @@
    align-items: flex-end;
 
    @media (max-width:$mobileSmall) {
-      padding: 50px 0 70px;
+      padding: 70px 0 50px;
       background-image: url('./../img/bg-home-480-50.jpg');
    }
 
@@ -124,10 +124,10 @@
 				font-size: 25px;
 				font-weight: 500;
 				line-height: 1.2;
-				text-shadow: 0 0 15px $mainColor;
+				text-shadow: 0 0 5px $mainColor;
 	
 				@media (max-width:1500px) {
-					font-size: calc(toRem(17) + 2*((100vw - 320px) / (1500 - 320)));
+					font-size: calc(toRem(16) + 3*((100vw - 320px) / (1500 - 320)));
 				}
 				
 			}
@@ -136,6 +136,9 @@
 	
 }
 
+.action__text {
+	text-shadow: 0 0 5px $mainColor;
+}
 
 .preload {
    transition: none !important;
