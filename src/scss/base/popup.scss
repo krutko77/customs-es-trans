@@ -61,7 +61,7 @@ body::after {
    background-color: $mainBgColor;
    padding: 20px;
    width: 100%;
-   max-width: 500px;
+   max-width: 620px;
    border-radius: 20px;
 
    .lock & {
@@ -88,8 +88,8 @@ body::after {
 .popup__img-wrapper {
    overflow: hidden;
    width: 100%;
-   max-width: 460px;
-   aspect-ratio: 460/330;
+   max-width: 636px;
+   aspect-ratio: 636/900;
 }
 
 .popup__img {

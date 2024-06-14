@@ -2,7 +2,7 @@
 .home {
    height: 100vh;
    padding: 120px 0 70px;
-   background-image: url('./../img/bg-home-40-1.jpg');
+   background-image: url('./../img/bg-home-40.jpg');
    background-size: cover;
    background-position: bottom right;
    width: 100%;
@@ -16,7 +16,7 @@
 
    @media (max-width:$mobileSmall) {
       padding: 70px 0 50px;
-      background-image: url('./../img/bg-home-480-50.jpg');
+      background-image: url('./../img/bg-home-480-2-40.jpg');
    }
 
    &__container {
