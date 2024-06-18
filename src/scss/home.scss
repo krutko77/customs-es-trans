@@ -12,11 +12,15 @@
    display: flex;
    flex-direction: column;
    justify-content: center;
-   align-items: flex-end;
+
+   @media (max-width:$tablet) {
+		padding: 0;      
+      background-image: url('./../img/bg-home-992-40.jpg');
+
+   }
 
    @media (max-width:$mobileSmall) {
-      padding: 70px 0 50px;
-      background-image: url('./../img/bg-home-480-2-40.jpg');
+      background-image: url('./../img/bg-home-480-40.jpg');
    }
 
    &__container {
@@ -25,6 +29,19 @@
 
    &__content {
       text-transform: uppercase;
+
+      @media (max-width:$tablet) {
+         height: 100vh;
+			padding: 50px 0 0px;
+         display: flex;
+         flex-direction: column;
+         justify-content: space-around;
+      }
+
+		@media (max-width:$mobileSmall) {
+			padding: 90px 0 60px;
+         justify-content: space-between;
+      }
    }
 
    &__title {
@@ -67,8 +84,8 @@
          margin-bottom: 50px;
       }
 
-		@media (max-width:$mobile) {
-         margin-bottom: 30px;
+      @media (max-width:$mobileSmall) {
+         margin-bottom: 20px;
       }
    }
 
@@ -80,6 +97,10 @@
 
    &__offer-wrap {
       max-width: 750px;
+
+      @media (max-width:$tablet) {
+         max-width: 600px;
+      }
    }
 
    &__icons {
@@ -110,34 +131,46 @@
       font-weight: 500;
    }
 
-	.list {
-		&__item {
-			display: flex;
-			margin-bottom: toEm(35, 25);
+   .list {
+      &__item {
+         display: flex;
+         margin-bottom: toEm(35, 25);
 
-			@media (max-width: $mobile) {
-				margin-bottom: 20px;
-			}
-	
-			p {
-				text-transform: uppercase;
-				font-size: 25px;
-				font-weight: 500;
-				line-height: 1.2;
-				text-shadow: 0 0 5px $mainColor;
-	
+			@media (max-width: 1500px) {
+            margin-bottom: 20px;
+         }
+
+         @media (max-width: $mobile) {
+            margin-bottom: 20px;
+         }
+
+			@media (max-width: $mobileSmall) {
+            margin-bottom: 15px;
+         }
+
+         p {
+            text-transform: uppercase;
+            font-size: toRem(25);
+            font-weight: 500;
+            line-height: 1.2;
+            text-shadow: 0 0 5px $mainColor;
+
 				@media (max-width:1500px) {
-					font-size: calc(toRem(16) + 3*((100vw - 320px) / (1500 - 320)));
-				}
-				
-			}
-		}
-	}
-	
+               font-size: 20px;
+            }
+
+            @media (max-width:$tablet) {
+               font-size: calc(toRem(16) + 9*((100vw - 320px) / (1500 - 320)));
+            }
+
+         }
+      }
+   }
+
 }
 
 .action__text {
-	text-shadow: 0 0 5px $mainColor;
+   text-shadow: 0 0 5px $mainColor;
 }
 
 .preload {
