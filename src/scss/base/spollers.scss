@@ -5,24 +5,25 @@
 .spollers {
 	display: grid;
 	gap: 15px;
+
+	&__list {
+		margin-left: em(25, 20);
+		
+	}	
 }
-// Спойлер
-.spollers__item {
-	font-size: toRem(20);
-}
+
 // Заголовок спойлера
 .spollers__title {
 	width: 100%;
 	cursor: default;
 	text-align: left;
-	border: 1px solid #eee;
-	padding: toRem(10) toRem(15);
+	border: 2px solid $linkOtherColor;
+	padding: toRem(10) toRem(45) toRem(10) toRem(15);
 	border-radius: toRem(5);
 	position: relative;
 	list-style: none;
-	&::marker,
-	&::-webkit-details-marker {
-		display: none;
+	margin-bottom: toEm(7, 20);
+	&::marker {
 	}
 	._spoller-init & {
 		cursor: pointer;
@@ -32,7 +33,7 @@
 			position: absolute;
 			right: 10px;
 			top: 50%;
-			background-color: #000;
+			background-color: $accentColor;
 			height: 2px;
 			width: 15px;
 			transition: transform 0.5s ease 0s;
@@ -61,15 +62,15 @@
 				content: "";
 				position: absolute;
 				right: 0;
-				top: toRem(12);
-				height: toRem(1);
+				top: rem(12);
+				height: rem(1);
 				transition: all 0.3s ease 0s;
-				width: toRem(10);
+				width: rem(10);
 				background-color: #000;
 			}
 			&::before {
 				transform: rotate(40deg);
-				right: toRem(7);
+				right: rem(7);
 			}
 			&::after {
 				transform: rotate(-40deg);
@@ -90,5 +91,6 @@
 .spollers__body {
 	padding: toRem(20);
 	border-radius: toRem(5);
-	border: 1px solid #eee;
+	border: 2px solid $accentColor;
 }
+
