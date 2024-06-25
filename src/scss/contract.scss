@@ -25,19 +25,6 @@
       text-align: center;
    }
 
-   &__title--1 {
-
-      &::after {
-         left: 17%;
-      }
-   }
-
-   &__title--2 {
-      &::after {
-         left: 31%;
-      }
-   }
-
    &__content {
       border: solid 1px $mainColor;
    }

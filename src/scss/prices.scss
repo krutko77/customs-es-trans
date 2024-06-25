@@ -12,7 +12,7 @@
       &::after {
          left: 1%;
       }
-   }   
+   }
 }
 
 .grid-prices {
@@ -76,10 +76,10 @@
    }
 
    &__img-wrapper {
-		width: fit-content;      
-		aspect-ratio: 67/64;
-		overflow: hidden;
-		margin-bottom: toEm(15, 20);
+      width: fit-content;
+      aspect-ratio: 67/64;
+      overflow: hidden;
+      margin-bottom: toEm(15, 20);
    }
 
    &__icons {
@@ -131,8 +131,8 @@
 
 .grid-prices-2 .card {
 
-	&__img-wrapper {
-		aspect-ratio: 64/64;		
+   &__img-wrapper {
+      aspect-ratio: 64/64;
    }
 
    &__icons {
