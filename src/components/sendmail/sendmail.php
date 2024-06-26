@@ -32,12 +32,12 @@ $mail->Subject = 'Привет! Это запрос с лендинга по п�
 //Тело письма
 $body = '<h1>Меня интересует работа менеджером по продажам в ООО "ЕС Транс"</h1>';
 
-if (trim(!empty($_POST['first-name']))) {
-	$body .= '<p><strong>Имя:</strong> ' . $_POST['first-name'] . '</p>';
+if (trim(!empty($_POST['company-name']))) {
+	$body .= '<p><strong>Название компании:</strong> ' . $_POST['company-name'] . '</p>';
 }
 
-if (trim(!empty($_POST['last-name']))) {
-	$body .= '<p><strong>Фамилия:</strong> ' . $_POST['last-name'] . '</p>';
+if (trim(!empty($_POST['first-name']))) {
+	$body .= '<p><strong>Имя:</strong> ' . $_POST['first-name'] . '</p>';
 }
 
 if (trim(!empty($_POST['tel']))) {

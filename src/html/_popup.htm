@@ -3,40 +3,49 @@
 		<div class="popup__content">
 			<button data-close type="button" class="popup__close margin-bottom-10">Закрыть</button>
 			<h3 class="poput__title title">Приветствуем вас!</h3>
-			<p class="popup__top text margin-bottom-20">Если вы ищете новые вызовы и хотите стать частью динамичной и перспективной логистической компании, то эта возможность для вас!</p>
+			<div class="popup__top margin-bottom-20">
+				<div class="popup__description">Меня зовут Сергей Денисов, начальник отдела декларировния. Заполните
+					пожалуйста форму и я отвечу на ваши вопросы.</div>
+				<div class="popup__img-wrapper">
+					<img class="popup__img" data-src="@img/img-popup.jpg" width="200" height="215" alt="фото сотрудника">
+				</div>
+			</div>
 			<div class="popup__form form">
-				<form class="form__body" id="form" name="myForm" action="files/sendmail/sendmail.php" method="POST" data-ajax>
+				<form class="form__body" id="form" name="myForm" action="files/sendmail/sendmail.php" method="POST"
+					data-ajax>
 					<div class="form__contact-block margin-bottom-30">
 						<div class="form__placeholder-container">
-							<input class="form__input for-clear text" id="first-name" type="text" name="first-name" data-validate
-								data-error="Напишите имя" data-required placeholder=" ">
+							<input class="form__input for-clear text" id="company-name" type="text" name="company-name"
+								data-validate data-error="Напишите название компании" data-required placeholder=" ">
+							<label class="form__label text-form" for="company-name">Название компании *</label>
+						</div>
+						<div class="form__placeholder-container">
+							<input class="form__input for-clear text" id="first-name" type="text" name="first-name"
+								data-validate data-error="Напишите имя" data-required placeholder=" ">
 							<label class="form__label text-form" for="first-name">Имя *</label>
 						</div>
 						<div class="form__placeholder-container">
-							<input class="form__input for-clear text" id="last-name" type="text" name="last-name" data-validate
-								data-error="Напишите имя" data-required placeholder=" ">
-							<label class="form__label text-form" for="last-name">Фамилия *</label>
-						</div>
-						<div class="form__placeholder-container">
 							<input class="form__input text-form for-clear text" id="tel" type="text" name="tel" data-validate
-							data-error="Напишите телефон или мессенджер" data-required placeholder=" ">
+								data-error="Напишите телефон или мессенджер" data-required placeholder=" ">
 							<label class="form__label text-form" for="tel">Телефон или мессенджер *</label>
 						</div>
 						<div class="form__placeholder-container">
 							<input class="form__input for-clear text" id="email" type="email" name="email" data-validate
-							data-error="Напишите ваш e-mail" data-required placeholder=" ">
+								data-error="Напишите ваш e-mail" data-required placeholder=" ">
 							<label class="form__label text-form" for="email">E-mail *</label>
 						</div>
 						<div class="form__placeholder-container">
 							<textarea class="form__input for-clear text" name="text-message" id="text-message" data-validate
-							data-error="Напишите, почему вы хотите работать у нас" data-required placeholder=" "></textarea>
-							<label class="form__label" for="text-message">Почему вы хотите работать у нас *</label>
+								data-error="Напишите, почему вы хотите работать у нас" data-required placeholder=" "></textarea>
+							<label class="form__label" for="text-message">Опишите требуемую услугу *</label>
 						</div>
 						<div class="form__checkbox checkbox">
 							<input id="formAgreement" type="checkbox" name="agreement" class="checkbox__input" data-required>
-							<label for="formAgreement" class="checkbox__label"><span class="text-form">Заполняя форму, я соглашаюсь на обработку персональных данных в соответствии с <a class="form__link"
-								href="https://drivers.es-trans.ru/politika-obrabotki.html">Политикой</a> и <a class="form__link"
-								href="https://drivers.es-trans.ru/soglashenie.html">Соглашением</a> обработки персональных данных</span></label>
+							<label for="formAgreement" class="checkbox__label"><span class="text-form">Заполняя форму, я
+									соглашаюсь на обработку персональных данных в соответствии с <a class="form__link"
+										href="https://drivers.es-trans.ru/politika-obrabotki.html">Политикой</a> и <a
+										class="form__link" href="https://drivers.es-trans.ru/soglashenie.html">Соглашением</a>
+									обработки персональных данных</span></label>
 						</div>
 						<input type="hidden" name="code" value="" id="code">
 						<div class="form__video-box">
@@ -46,7 +55,8 @@
 							</video>
 						</div>
 					</div>
-					<button class="form__button form-button text button offer-button clear-button margin-bottom-20" type="submit">Отправить</button>
+					<button class="form__button form-button text button offer-button clear-button margin-bottom-20"
+						type="submit">Отправить</button>
 				</form>
 			</div>
 		</div>

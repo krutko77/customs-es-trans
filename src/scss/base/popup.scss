@@ -76,20 +76,35 @@ body::after {
 .popup__close {
    align-self: flex-end;
    color: $accentColor;
-   transition: color 0.3s ease;   
+   transition: color 0.3s ease;
 }
 
 @media (any-hover: hover) {
-	.popup__close:hover {
-		color: $secondLinkColor;
-	}
+   .popup__close:hover {
+      color: $secondLinkColor;
+   }
+}
+
+.popup__top {
+   display: flex;
+}
+
+.popup__description {
+	flex: 1 0 60%;
+	font-size: toRem(17);
+   line-height: 1.5;
+
+   @media (max-width:1500px) {
+      font-size: calc(toRem(16) + 4*((100vw - 320px) / (1500 - 320)));
+   }
 }
 
 .popup__img-wrapper {
+	flex: 1 0 40%;
+	padding-left: 10px;
    overflow: hidden;
-   width: 100%;
-   max-width: 636px;
-   aspect-ratio: 636/900;
+   max-width: 200px;
+   aspect-ratio: 200/215;
 }
 
 .popup__img {
