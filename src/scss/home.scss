@@ -8,19 +8,27 @@
    width: 100%;
    aspect-ratio: 16/9;
    color: $mainBgColor;
-
    display: flex;
    flex-direction: column;
    justify-content: center;
 
+ 
+
    @media (max-width:$tablet) {
-		padding: 0;      
+      padding: 0;
       background-image: url('./../img/bg-home-992-40.jpg');
 
    }
 
    @media (max-width:$mobileSmall) {
       background-image: url('./../img/bg-home-480-40.jpg');
+   }
+
+	@media (max-width: 1024px) and (min-aspect-ratio: 1024/600) {
+      padding: 50px 0 0;
+      height: 750px;
+		justify-content: flex-start;
+		background-image: url('./../img/bg-home-40.jpg');
    }
 
    &__container {
@@ -32,14 +40,14 @@
 
       @media (max-width:$tablet) {
          height: 100vh;
-			padding: 50px 0 0px;
+         padding: 50px 0 0px;
          display: flex;
          flex-direction: column;
          justify-content: space-around;
       }
 
-		@media (max-width:$mobileSmall) {
-			padding: 90px 0 60px;
+      @media (max-width:$mobileSmall) {
+         padding: 90px 0 60px;
          justify-content: space-between;
       }
    }
@@ -136,7 +144,7 @@
          display: flex;
          margin-bottom: toEm(35, 25);
 
-			@media (max-width: 1500px) {
+         @media (max-width: 1500px) {
             margin-bottom: 20px;
          }
 
@@ -144,7 +152,7 @@
             margin-bottom: 20px;
          }
 
-			@media (max-width: $mobileSmall) {
+         @media (max-width: $mobileSmall) {
             margin-bottom: 15px;
          }
 
@@ -155,7 +163,7 @@
             line-height: 1.2;
             text-shadow: 0 0 5px $mainColor;
 
-				@media (max-width:1500px) {
+            @media (max-width:1500px) {
                font-size: 20px;
             }
 

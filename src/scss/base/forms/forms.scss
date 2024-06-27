@@ -131,6 +131,11 @@
 
    .text-form {
       line-height: 1.2;
+      font-size: toRem(14);
+
+      @media (max-width:1500px) {
+         font-size: calc(toRem(12) + 2*((100vw - 320px) / (1500 - 320)));
+      }
    }
 }
 

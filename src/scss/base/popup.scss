@@ -68,7 +68,7 @@ body::after {
       visibility: visible;
 
       @media (max-width:$tablet) {
-         max-width: 400px;
+         max-width: 550px;
       }
    }
 }
@@ -87,15 +87,20 @@ body::after {
 
 .popup__top {
    display: flex;
+
+	@media (max-width:$mobileSmall) {
+      flex-direction:column-reverse;
+		align-items: center;
+   }
 }
 
 .popup__description {
 	flex: 1 0 60%;
-	font-size: toRem(17);
+	font-size: toRem(20);
    line-height: 1.5;
 
-   @media (max-width:1500px) {
-      font-size: calc(toRem(16) + 4*((100vw - 320px) / (1500 - 320)));
+   @media (max-width:$pc) {
+      font-size: calc(toRem(14) + 6*((100vw - 320px) / (1500 - 320)));
    }
 }
 

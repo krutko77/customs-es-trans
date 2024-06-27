@@ -23,14 +23,14 @@ $mail->Port       = 465;
 
 
 //От кого письмо
-$mail->setFrom('drivers-lending77@es-trans.ru', 'Лендинг по поиску менеджера по продажам'); // Указать нужный E-mail
+$mail->setFrom('drivers-lending77@es-trans.ru', 'Лендинг "Доставим и растаможим"'); // Указать нужный E-mail
 //Кому отправить
 $mail->addAddress('kpv@es-trans.pro'); // Указать нужный E-mail 
 //Тема письма
-$mail->Subject = 'Привет! Это запрос с лендинга по поиску менеджера по продажам.';
+$mail->Subject = 'Привет! Это запрос с лендинга "Доставим и растаможим"!.';
 
 //Тело письма
-$body = '<h1>Меня интересует работа менеджером по продажам в ООО "ЕС Транс"</h1>';
+$body = '<h1>Нас интересуют услуги ООО "ЕС Транс"</h1>';
 
 if (trim(!empty($_POST['company-name']))) {
 	$body .= '<p><strong>Название компании:</strong> ' . $_POST['company-name'] . '</p>';
@@ -49,7 +49,7 @@ if (trim(!empty($_POST['email']))) {
 }
 
 if (trim(!empty($_POST['text-message']))) {
-	$body .= '<p><strong>Почему вы хотите у нас работать:</strong> ' . $_POST['text-message'] . '</p>';
+	$body .= '<p><strong>Вопрос по доставке или таможенному оформлению:</strong> ' . $_POST['text-message'] . '</p>';
 }
 
 // Проверка на бота
