@@ -35,7 +35,7 @@ body::after {
    pointer-events: auto;
 }
 
-.popup_show .popup__content {
+.popup_show .popup__content, .popup_show .popup__content-form {
    visibility: visible;
    transform: scale(1);
 }
@@ -52,7 +52,8 @@ body::after {
    align-items: center;
 }
 
-.popup__content {
+.popup__content,
+.popup__content-form {
    display: flex;
    flex-direction: column;
    visibility: hidden;
@@ -60,16 +61,24 @@ body::after {
    transition: transform 0.3s ease 0s;
    background-color: $mainBgColor;
    padding: 20px;
-   width: 100%;
-   max-width: 620px;
    border-radius: 20px;
 
    .lock & {
       visibility: visible;
+   }
+}
 
-      @media (max-width:$tablet) {
-         max-width: 550px;
-      }
+.popup__content {
+	width: 100%;
+   max-width: 620px;
+}
+
+.popup__content-form {
+   width: 100%;
+   max-width: 620px;
+
+   @media (max-width:$tablet) {
+      max-width: 550px;
    }
 }
 
@@ -88,15 +97,15 @@ body::after {
 .popup__top {
    display: flex;
 
-	@media (max-width:$mobileSmall) {
-      flex-direction:column-reverse;
-		align-items: center;
+   @media (max-width:$mobileSmall) {
+      flex-direction: column-reverse;
+      align-items: center;
    }
 }
 
 .popup__description {
-	flex: 1 0 60%;
-	font-size: toRem(20);
+   flex: 1 0 60%;
+   font-size: toRem(20);
    line-height: 1.5;
 
    @media (max-width:$pc) {
@@ -104,16 +113,23 @@ body::after {
    }
 }
 
-.popup__img-wrapper {
-	flex: 1 0 40%;
-	padding-left: 10px;
+.popup__img-wrapper-form {
+   flex: 1 0 40%;
+   padding-left: 10px;
    overflow: hidden;
    max-width: 200px;
    aspect-ratio: 200/215;
 }
 
+.popup__img-wrapper {
+	border: solid 1px $secondLinkColor;
+   overflow: hidden;
+   max-width: 636px;
+   aspect-ratio: 636/900;
+}
+
 .popup__img {
    width: 100%;
    height: auto;
-   object-fit: cover;
+   
 }
