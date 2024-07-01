@@ -1,135 +1,132 @@
 body::after {
-   content: "";
-   background-color: rgba(0, 0, 0, 0.5);
-   position: fixed;
-   width: 100%;
-   height: 100%;
-   top: 0;
-   left: 0;
-   opacity: 0;
-   transition: opacity 0.8s ease 0s;
-   pointer-events: none;
-   z-index: 149;
+	content: "";
+	background-color: rgba(0, 0, 0, 0.5);
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	transition: opacity 0.8s ease 0s;
+	pointer-events: none;
+	z-index: 149;
 }
 
 .popup-show body::after {
-   opacity: 1;
+	opacity: 1;
 }
 
 .popup {
-   position: fixed;
-   top: 0;
-   left: 0;
-   bottom: 0;
-   right: 0;
-   padding: 30px 10px;
-   transition: visibility 0.8s ease 0s;
-   visibility: hidden;
-   pointer-events: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	padding: 30px 10px;
+	transition: visibility 0.8s ease 0s;
+	visibility: hidden;
+	pointer-events: none;
 }
 
 .popup_show {
-   z-index: 150;
-   visibility: visible;
-   overflow: auto;
-   pointer-events: auto;
+	z-index: 150;
+	visibility: visible;
+	overflow: auto;
+	pointer-events: auto;
 }
 
-.popup_show .popup__content, .popup_show .popup__content-form {
-   visibility: visible;
-   transform: scale(1);
+.popup_show .popup__content {
+	visibility: visible;
+	transform: scale(1);
 }
 
 .popup__wrapper {
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-   min-height: 100%;
-   flex: 1 1 auto;
-   width: 100%;
-   display: flex;
-   justify-content: center;
-   align-items: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	min-height: 100%;
+	flex: 1 1 auto;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
-.popup__content,
-.popup__content-form {
-   display: flex;
-   flex-direction: column;
-   visibility: hidden;
-   transform: scale(0);
-   transition: transform 0.3s ease 0s;
-   background-color: $mainBgColor;
-   padding: 20px;
-   border-radius: 20px;
+.popup__content {
+	display: flex;
+	flex-direction: column;
+	visibility: hidden;
+	transform: scale(0);
+	transition: transform 0.3s ease 0s;
+	background-color: $mainBgColor;
+	padding: 20px;
+	border-radius: 20px;
 
-   .lock & {
-      visibility: visible;
-   }
+	.lock & {
+		visibility: visible;
+	}
 }
 
 .popup__content {
 	width: 100%;
-   max-width: 620px;
+	max-width: 620px;
 }
 
-.popup__content-form {
-   width: 100%;
-   max-width: 620px;
+.popup__content.content-form {
 
-   @media (max-width:$tablet) {
-      max-width: 550px;
-   }
+	@media (max-width:$tablet) {
+		max-width: 550px;
+	}
 }
 
 .popup__close {
-   align-self: flex-end;
-   color: $accentColor;
-   transition: color 0.3s ease;
+	align-self: flex-end;
+	color: $accentColor;
+	transition: color 0.3s ease;
 }
 
 @media (any-hover: hover) {
-   .popup__close:hover {
-      color: $secondLinkColor;
-   }
+	.popup__close:hover {
+		color: $secondLinkColor;
+	}
 }
 
 .popup__top {
-   display: flex;
+	display: flex;
 
-   @media (max-width:$mobileSmall) {
-      flex-direction: column-reverse;
-      align-items: center;
-   }
+	@media (max-width:$mobileSmall) {
+		flex-direction: column-reverse;
+		align-items: center;
+	}
 }
 
 .popup__description {
-   flex: 1 0 60%;
-   font-size: toRem(20);
-   line-height: 1.5;
+	flex: 1 0 60%;
+	font-size: toRem(20);
+	line-height: 1.5;
 
-   @media (max-width:$pc) {
-      font-size: calc(toRem(14) + 6*((100vw - 320px) / (1500 - 320)));
-   }
+	@media (max-width:$pc) {
+		font-size: calc(toRem(14) + 6*((100vw - 320px) / (1500 - 320)));
+	}
 }
 
 .popup__img-wrapper-form {
-   flex: 1 0 40%;
-   padding-left: 10px;
-   overflow: hidden;
-   max-width: 200px;
-   aspect-ratio: 200/215;
+	flex: 1 0 40%;
+	padding-left: 10px;
+	overflow: hidden;
+	max-width: 200px;
+	aspect-ratio: 200/215;
 }
 
 .popup__img-wrapper {
 	border: solid 1px $secondLinkColor;
-   overflow: hidden;
-   max-width: 636px;
-   aspect-ratio: 636/900;
+	overflow: hidden;
+	max-width: 636px;
+	aspect-ratio: 636/900;
 }
 
 .popup__img {
-   width: 100%;
-   height: auto;
-   
+	width: 100%;
+	height: auto;
+
 }
