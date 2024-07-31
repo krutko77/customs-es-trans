@@ -1,195 +1,1035 @@
 <!DOCTYPE html>
-<html>
-
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Вёрстка «ЕС Транс - доставим и растаможим»</title>
-</head>
+<html lang="ru">
+@@include('html/_head.htm',{
+"title":"Доставим и растаможим | ЕС Транс"
+})
 
 <body>
-	<div class="rootpage">
-		<h1>Вёрстка сайта «ЕС Транс - доставим и растаможим»</h1>
-		<div class="rootpage__info">
-			Описание проекта
-		</div>
-		<h2>Страницы сайта общие:</h2>
-		<ol class="rootpage__list">
-			<li><a target="_blank" href="home.html">Главная</a></li>
-			<li><a target="_blank" href="thank-you-page-2.html">Cтраница благодарности</a></li>
-			<li><a target="_blank" href="404.html">404</a></li>
-		</ol>
-		</ol>
-		<h2>Страницы с нормативными документами:</h2>
-		<ol class="rootpage__list">
-			<li><a href="politika-obrabotki.html">Политика обработки данных</a></li>
-			<li><a href="soglashenie.html">Соглашение об обработке данных</a></li>
-			<li><a href="contract.html">Договор на перевозки</a></li>
-			<li><a href="customs-contract.html">Договор на услуги ТО</a></li>
-		</ol>
-		<div class="rootpage__tnx">
-			<h2>Спасибо за заказ!</h2>
-			<p>Буду рад хорошему отзыву.</p>
-			<p>Обращайтесь ещё!</p>
-		</div>
-		<div class="rootpage__contacts">
-			<h2>Мои контакты:</h2>
-			<p>Почта: <a href="mailto:webkrutko@mail.ru">webkrutko@mail.ru</a></p>
-			<p>Телефон: <a href="tel:+375299580130">+375 29 958-01-30</a><br>
-				<a href="tel:+79935644581">+7 993 564-45-81</a>
-			</p>
-		</div>
+	<div class="wrapper">
+		@@include('html/_header.htm',{})
+		<main class="page text">
+			<section class="home" data-watch="navigator" data-watch-threshold="0.65">
+				<div class="home__container">
+					<div class="home__content">
+						<div class="home__content-top">
+							<div class="home__name-block">
+								<h1 class="home__title" data-watch data-watch-once>ЕС Транс</h1>
+								<p class="home__label" data-watch data-watch-once>Доставим и растаможим</p>
+							</div>
+							<div class="home__offer-wrap margin-bottom-60">
+								<ul class="home__list list">
+
+									<li class="list__item margin-bottom-10">
+										<svg class="home__icons">
+											<use xlink:href="@img/icons/icons.svg#check"></use>
+										</svg>
+										</p>
+										<p class="list__text">Автоперевозки из Европы, Китая и Турции, в том числе сборных и
+											опасных
+											грузов
+									</li>
+
+									<li class="list__item margin-bottom-10">
+										<svg class="home__icons">
+											<use xlink:href="@img/icons/icons.svg#check"></use>
+										</svg>
+										<p class="list__text">авиаперевозки из Китая, Индии и ОАЭ</p>
+									</li>
+
+									<li class="list__item margin-bottom-10">
+										<svg class="home__icons">
+											<use xlink:href="@img/icons/icons.svg#check"></use>
+										</svg>
+										<p class="list__text">Таможенное оформление грузов в разных регионах России
+										<p>
+									</li>
+
+									<li class="list__item margin-bottom-10">
+										<svg class="home__icons">
+											<use xlink:href="@img/icons/icons.svg#check"></use>
+										</svg>
+										<p class="list__text">Нотификация ФСБ, сертификация, заключение ФСТЭК, декларация
+											соответствия, лицензирование</p>
+									</li>
+
+									<li class="list__item margin-bottom-10">
+										<svg class="home__icons">
+											<use xlink:href="@img/icons/icons.svg#check"></use>
+										</svg>
+										<p class="list__text">Работаем в режиме 24/7 по принципу «одного окна»</p>
+									</li>
+
+								</ul>
+							</div>
+						</div>
+						<div class="home__content-bottom">
+							<div class="home__action action">
+								<p class="action__text margin-bottom-20">Узнайте наши цены для вас!</p>
+								<button class="button offer-button preload" data-popup="#popup-form"
+									aria-label="Кнопка рассчитать стоимость">Рассчитать
+									стоимость</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="prices" id="prices" data-watch="navigator" data-watch-threshold="0.15">
+				<div class="prices__container">
+					<div class="prices__wrapper">
+						<h2 class="prices__title title">Цены</h2>
+						<div class="prices__subtitle-box subtitle-box">
+							<svg class="prices__icons icons-check">
+								<use xlink:href="@img/icons/icons.svg#check"></use>
+							</svg>
+							<h3 class="prices__subtitle subtitle">Перевозка грузов</h3>
+						</div>
+						<div class="prices__grid grid-prices text margin-bottom-40">
+
+							<div data-watch data-watch-once class="grid-prices__item grid-prices__item--1 card">
+								<div class="card__top">
+									<div class="card__img-wrapper">
+										<img class="card__icons" width="67" height="64" data-src="@img/icons/card-icon.png"
+											alt="иконка грузовика">
+									</div>
+									<h4 class="card__title sub-subtitle">Германия-Москва</h4>
+									<p class="card__text">Доставка, оформление документов, отслеживание груза 24/7</p>
+									<p class="card__text">Срок доставки от <strong>5 дней</strong></p>
+								</div>
+								<div class="card__bottom">
+									<div class="card__wrapper-link">
+										<a class="card__link link" href="" data-goto-top="100" data-goto=".europe">Подробнее</a>
+									</div>
+									<p class="card__price"><span class="card__text">от</span> <span
+											class="card__price-color"><strong>4500</strong></span> EUR
+									</p>
+								</div>
+							</div>
+
+							<div data-watch data-watch-once class="grid-prices__item grid-prices__item--2 card">
+								<div class="card__top">
+									<div class="card__img-wrapper">
+										<img class="card__icons" width="67" height="64" data-src="@img/icons/card-icon.png"
+											alt="иконка грузовика">
+									</div>
+									<h4 class="card__title sub-subtitle">Китай (Шанхай)-Москва</h4>
+									<p class="card__text">Доставка, оформление документов, отслеживание груза 24/7</p>
+									<p class="card__text">Срок доставки от <strong>16 дней</strong></p>
+								</div>
+								<div class="card__bottom">
+									<div class="card__wrapper-link">
+										<a class="card__link link" href="" data-goto-top="100" data-goto=".china">Подробнее</a>
+									</div>
+									<p class="card__price"><span class="card__text">от</span> <span
+											class="card__price-color"><strong>9 500</strong></span> USD
+									</p>
+								</div>
+							</div>
+
+							<div data-watch data-watch-once class="grid-prices__item grid-prices__item--3 card">
+								<div class="card__top">
+									<div class="card__img-wrapper">
+										<img class="card__icons" width="67" height="64" data-src="@img/icons/card-icon.png"
+											alt="иконка грузовика">
+									</div>
+									<h4 class="card__title sub-subtitle">Брест (ТЛЦ)-Москва</h4>
+									<p class="card__text">Доставка, отслеживание груза 24/7</p>
+									<p class="card__text">Срок доставки от <strong>2 дней</strong></p>
+								</div>
+								<div class="card__bottom">
+									<div class="card__wrapper-link">
+										<a class="card__link link" href="" data-goto-top="100" data-goto=".tlc">Подробнее</a>
+									</div>
+									<p class="card__price"><span class="card__text">от</span> <span
+											class="card__price-color"><strong>1300</strong></span> EUR
+									</p>
+								</div>
+							</div>
+
+							<div data-watch data-watch-once class="grid-prices__item grid-prices__item--4 card">
+								<div class="card__top">
+									<div class="card__img-wrapper">
+										<img class="card__icons" width="67" height="64" data-src="@img/icons/card-icon.png"
+											alt="иконка грузовика">
+									</div>
+									<h4 class="card__title sub-subtitle">Москва-Екатеринбург</h4>
+									<p class="card__text">Доставка, отслеживание груза 24/7</p>
+									<p class="card__text">Срок доставки от <strong>3 дней</strong></p>
+								</div>
+								<div class="card__bottom">
+									<div class="card__wrapper-link">
+										<a class="card__link link" href="" data-goto-top="100" data-goto=".russia">Подробнее</a>
+									</div>
+									<p class="card__price"><span class="card__text">от</span> <span
+											class="card__price-color"><strong>190 000</strong></span> RUB
+									</p>
+								</div>
+							</div>
+
+						</div>
+						<p class="prices__text margin-bottom-20">Здесь указаны индикативные фрахтовые ставки по нашим основным
+							направлениям автомобильных перевозок грузов. Стоимость
+							перевозки и время доставки груза в первую очередь зависят от маршрута перевозки, веса и количества
+							груза, класса опасности груза, необходимости дополнительного страхования в случае высокой стоимости
+							груза. Все условия
+							перевозок грузов очень разные, как и грузы, которые мы перевозим.</p>
+						<p class="prices__text margin-bottom-20">Информацию о стоимости перевозки груза самолетом (<a
+								class="prices__link link" href="" data-goto-top="100" data-goto=".avia">подробнее</a>) мы можем
+							предоставить по вашему запросу. Чтобы получить наиболее точный расчет, нам необходима детальная
+							информация о вашем грузе. Эти данные позволят нам оценить объем работы, требуемые ресурсы и прочие
+							факторы, которые влияют на стоимость перевозки.</p>
+						<p class="prices__text margin-bottom-60">Для быстрой предварительной оценки стоимости и времени
+							доставки, пожалуйста заполните небольшую форму, нажав на красную кнопку в блоке ниже.</p>
+						<div class="prices__subtitle-box subtitle-box">
+							<svg class="prices__iconsk icons-check">
+								<use xlink:href="@img/icons/icons.svg#check"></use>
+							</svg>
+							<h3 class="prices__subtitle subtitle">таможенное оформление грузов</h3>
+						</div>
+						<div class="prices__grid grid-prices grid-prices-2 text margin-bottom-40">
+
+							<div data-watch data-watch-once class="grid-prices__item grid-prices__item--1 card">
+								<div class="card__top">
+									<div class="card__img-wrapper">
+										<img class="card__icons" width="64" height="64" data-src="@img/icons/card-icon-2.png"
+											alt="иконка грузовика">
+									</div>
+									<h4 class="card__title sub-subtitle">Процедура импорт по 1 ДТ</h4>
+									<p class="card__text">Таможенное оформление одного товара по одной декларации на товары в
+										одном транспортном средстве</p>
+								</div>
+								<div class="card__bottom">
+									<p class="card__price"><span class="card__text">от</span> <span
+											class="card__price-color"><strong>15 000</strong></span> RUB
+									</p>
+								</div>
+							</div>
+
+							<div data-watch data-watch-once class="grid-prices__item grid-prices__item--2 card">
+								<div class="card__top">
+									<div class="card__img-wrapper">
+										<img class="card__icons" width="64" height="64" data-src="@img/icons/card-icon-2.png"
+											alt="иконка грузовика">
+									</div>
+									<h4 class="card__title sub-subtitle">Дополнительный лист к ДТ</h4>
+									<p class="card__text">Таможенное оформление каждого дополнительного листа к ДТ, при условии
+										таможенного оформления по ДТ более одного товара</p>
+								</div>
+								<div class="card__bottom">
+									<p class="card__price"><span class="card__text">от</span> <span
+											class="card__price-color"><strong>1 500</strong></span> RUB
+									</p>
+								</div>
+							</div>
+
+							<div data-watch data-watch-once class="grid-prices__item grid-prices__item--3 card">
+								<div class="card__top">
+									<div class="card__img-wrapper">
+										<img class="card__icons" width="64" height="64" data-src="@img/icons/card-icon-2.png"
+											alt="иконка грузовика">
+									</div>
+									<h4 class="card__title sub-subtitle">Обеспечение осмотра</h4>
+									<p class="card__text">Обеспечение осмотра/досмотра товаров (за одно транспортное средство)
+									</p>
+								</div>
+								<div class="card__bottom">
+									<p class="card__price"><span class="card__text">от</span> <span
+											class="card__price-color"><strong>5 000</strong></span> RUB
+									</p>
+								</div>
+							</div>
+
+							<div data-watch data-watch-once class="grid-prices__item grid-prices__item--4 card">
+								<div class="card__top">
+									<div class="card__img-wrapper">
+										<img class="card__icons" width="64" height="64" data-src="@img/icons/card-icon-2.png"
+											alt="иконка грузовика">
+									</div>
+									<h4 class="card__title sub-subtitle">Дополнительное ТС в ДТ</h4>
+									<p class="card__text">Дополнительное транспортное средство в декларации на товары (вагон,
+										контейнер, автомобиль)</p>
+								</div>
+								<div class="card__bottom">
+									<p class="card__price"><span class="card__text">от</span> <span
+											class="card__price-color"><strong>7 000</strong></span> RUB
+									</p>
+								</div>
+							</div>
+						</div>
+						<p class="prices__text margin-bottom-20">Выше указаны расценки по нашим базовым операциям при
+							подготовке таможенных документов и таможенному декларированию товаров.</p>
+						<p class="prices__text margin-bottom-20">Мы рады оказать помощь в таможенном оформлении груза (<a
+								class="prices__link link" href="" data-goto-top="100" data-goto=".customs">подробнее</a>).
+							Предоставьте упрощенную информацию о грузе, и мы сформируем примерную стоимость наших услуг.</p>
+						<p class="prices__text margin-bottom-20">Чтобы
+							сделать точный расчет стоимости, нам необходима полная информация о грузе. Эти данные
+							помогут нам
+							оценить сложность и объем работы, связанные с таможенным оформлением, а также учесть прочие
+							факторы, влияющие на стоимость, такие как необходимая сертификация, получение разрешений и
+							прочие
+							согласования.</p>
+						<p class="prices__text">Для быстрой предварительной оценки стоимости таможенного оформления,
+							пожалуйста заполните небольшую форму, нажав на красную кнопку в блоке ниже.</p>
+					</div>
+				</div>
+			</section>
+			@@include('html/_action-block.htm',{})
+			<section class="services" id="services" data-watch="navigator" data-watch-threshold="0.08">
+				<div class="services__container">
+					<h2 class="services__title title">Услуги</h2>
+					<div class="services__subtitle-box subtitle-box">
+						<svg class="services__icons icons-check">
+							<use xlink:href="@img/icons/icons.svg#check"></use>
+						</svg>
+						<h3 class="services__subtitle subtitle">Перевозки грузов автомобилями</h3>
+					</div>
+					<div class="clearfix margin-bottom-30">
+						<div class="services__img-box img-box-400 float-right">
+							<img class="services__img" data-src="@img/services/services-img-2-400.jpg" width="400" height="300"
+								alt="фото автомобиля 'ЕС Транс'">
+						</div>
+						<p class="services__text margin-bottom-20">ООО "ЕС Транс" является <strong>таможенным
+								перевозчиком</strong>. Наша компания выполняет перевозки грузов своими автомобилями и
+							привлеченным транспортом наших партнеров.</p>
+						<p class="services__text margin-bottom-20">Все
+							автомобили оборудованы спутниковой системой отслеживания, поэтому мы можем точно определить
+							местоположение груза в режиме 24/7. Доверительные отношения с нашими клиентами – это наш приоритет,
+							поэтомы мы предлагаем прозрачную коммуникацию на всех этапах перевозки, предоставляем информацию о
+							статусе груза, предупреждаем о возможных задержках и оперативно реагируем на запросы и потребности
+							клиентов.</p>
+						<p class="services__text margin-bottom-20">Мы полностью осознаём важность точной доставки
+							грузов в срок для наших клиентов. Поэтому наша компания предлагаем надёжные графики и оптимальные
+							маршруты,
+							чтобы обеспечить своевременную и сохранную доставку груза в назначенное место.</p>
+						<p class="services__text">Наша ответственность перевозчика застрахована на сумму 15 000 000 руб.</p>
+					</div>
+					<ul class="services__list list margin-bottom-50">
+						<li class="list__item margin-bottom-20">
+							<h4 class="services__text europe"><strong>Комплектные и сборные грузы из Европы</strong></h4>
+							<p>Мы обеспечиваем
+								полное покрытие Европы и работаем с опытными логистическими партнерами, чтобы гарантировать
+								надежность и безопасность перевозки груза. Независимо от размера вашего груза или его
+								особенностей, мы готовы предложить оптимальное решение для его перевозки из Европы. Для
+								доставки
+								сборных грузов, мы используем склады консолидации в Польше и Литве.</p>
+						</li>
+						<li class="list__item margin-bottom-20">
+							<h4 class="services__text china"><strong>Комплектные и сборные грузы из Китая</strong></h4>
+							<p class="services__text margin-bottom-10">ООО "ЕС Транс" предлагает услуги по автомобильной
+								перевозке
+								комплектных и сборных грузов из
+								Китая с помощью наших партнеров по автоперевозкам. У нас налажены долгосрочные партнерские
+								отношения с проверенными и надежными автоперевозчиками, чтобы обеспечить качественную и
+								своевременную доставку грузов нашим клиентам.</p>
+							<p>Наши логисты тесно сотрудничают с партнерами по автоперевозкам, чтобы организовать забор
+								груза с отправного пункта в Китае, выполнить необходимые таможенные формальности и доставить
+								груз в пункт назначения.</p>
+						</li>
+						<div class="services__img-box img-box-400 float-right">
+							<img class="services__img" data-src="@img/services/services-img-3-400.jpg" width="400" height="300"
+								alt="фото автомобиля 'ЕС Транс'">
+						</div>
+						<li class="list__item margin-bottom-20">
+							<h4 class="services__text tlc"><strong>Комплектные, в том числе и опасные грузы в/из стран
+									ЕАЭС</strong></h4>
+							<p class="services__text margin-bottom-10">Мы перевозим грузы в/из стран Евразийского
+								экономического союза (ЕАЭС)
+								с использованием
+								собственного автопарка. Наши автомобили оборудованы и имеют специальные разрешения на
+								перевозку опасных грузов, а наши менеджеры и водители прошли специальное обучение.</p>
+						</li>
+						<li class="list__item margin-bottom-20">
+							<h4 class="services__text russia"><strong>Таможенный перевозчик</strong></h4>
+							<p class="services__text">Так же наши машины
+								участвуют в доставке грузов из Европы, перегружаясь на приграничных ТЛЦ и доставляя грузы в
+								Россию и страны ЕАЭС в режиме таможенного транзита.</p>
+						</li>
+						<li class="list__item">
+							<h4 class="services__text russia"><strong>Комплектные, в том числе и опасные грузы по
+									России</strong></h4>
+							<p class="services__text">Перевозки по России мы осуществляем, в основном, собственными
+								автомобилями.</p>
+						</li>
+					</ul>
+					<div class="services__subtitle-box subtitle-box">
+						<svg class="services__icons icons-check">
+							<use xlink:href="@img/icons/icons.svg#check"></use>
+						</svg>
+						<h3 class="services__subtitle subtitle avia">Авиаперевозки</h3>
+					</div>
+					<div class="services__img-box img-box-400 float-right">
+						<img class="services__img" data-src="@img/services/services-img-avia-400.jpg" width="400" height="300"
+							alt="фото грузового самолета">
+					</div>
+					<p class="services__text margin-bottom-10">Если вам требуется надежный партнер для доставки
+						грузов самолетом из
+						Китая, Индии, стран юго-восточной Азии и ОАЭ, наша транспортная компания готова предложить выгодные
+						решения, обеспечивая быструю и
+						безопасную доставку ваших товаров.
+					</p>
+					<p class="services__text margin-bottom-10">Cкорость и надежность являются ключевыми факторами в
+						доставке грузов
+						авиационным транспортом. Поэтому мы стремимся предложить нашим клиентам высокий уровень
+						обслуживания, соблюдая сроки и гарантируя сохранность груза.</p>
+					<p class="services__text margin-bottom-50">Мы сотрудничаем с различными авиакомпаниями и агентами, что
+						позволяет выбирать оптимальные маршруты и гибкие варианты доставки. Мы организовываем забор груза с
+						отправного пункта, обеспечиваем его правильную упаковку и таможенное оформление, а затем доставляем
+						груз самолетом в пункт назначения.</p>
+					<div class=" services__subtitle-box subtitle-box">
+						<svg class="services__icons icons-check">
+							<use xlink:href="@img/icons/icons.svg#check"></use>
+						</svg>
+						<h3 class="services__subtitle subtitle customs">Таможенное оформление</h3>
+					</div>
+					<div class="clearfix margin-bottom-20">
+						<div class="services__img-box img-box-400 float-left">
+							<img class="services__img" data-src="@img/services/services-img-4-400.jpg" width="400" height="300"
+								alt="фото автомобилей в таможне">
+						</div>
+						<p class=" services__text margin-bottom-20">Мы готовы оказать услуги по таможенному оформлению грузов
+							<strong>по всей
+								территории России</strong>. Наша сильная сторона — это тщательный сбор информации о грузе и
+							формирование
+							необходимого пакета документов на этапе подготовки. В свою очередь, это позволяет производить
+							таможенную
+							очистку груза в
+							кратчайшие сроки к вашей выгоде.
+						</p>
+						<p class=" services__text margin-bottom-20">Наш ключевой партнер в таможенном оформления товаров и
+							транспортных средств – компания ООО «СЭЗ-Сервис». Она занимает прочную позицию на российском рынке
+							брокерских услуг и приобрела репутацию надежного делового партнера. Компания осуществляет свою
+							деятельность с 2006 года на всей территории России без ограничений (<strong>регистрационный номер
+								1626 в
+								реестре таможенных представителей Федеральной таможенной службы Российской Федерации</strong>).
+						</p>
+						<div class="services__img-box img-box-400 float-right">
+							<img class="services__img" data-src="@img/services/services-img-5-400.jpg" width="400" height="300"
+								alt="фото офиса">
+						</div>
+						<p class=" services__text margin-bottom-20">ООО «СЭЗ-Сервис» строит свою работу на трех базовых
+							принципах – это профессионализм, прозрачность и оперативность. Таможенное оформление производится
+							по принципу <strong>«одного окна» в режиме 24/7</strong> на основании договора и в строгом
+							соответствии с таможенным законодательством и законодательством о внешнеторговой деятельности, а
+							это гарантирует надежность действий ООО «СЭЗ-Сервис» и высокий уровень качества предоставляемых
+							услуг.</p>
+						<p class=" services__text margin-bottom-20">Сотрудники ООО «СЭЗ-Сервис» имеют обширный опыт получения
+							классификационных решений и таможенного оформления с применением особого порядка декларирования. С
+							непосредственным участием сотрудников компании получено <strong>более 70 решений ФТС России о
+								классификации
+								товаров</strong>. ООО «СЭЗ-Сервис» подготовит пакет документов для подачи и получения
+							классификационного
+							решения ФТС РФ.</p>
+						<div class="services__img-box img-box-400 float-left">
+							<img class="services__img" data-src="@img/services/services-img-6-400.jpg" width="400" height="300"
+								alt="фото офиса">
+						</div>
+						<p class=" services__text margin-bottom-20">Кроме того, компания производит оформление различного
+							многофункционального оборудования (вентиляционного, холодильного, отопительного и т.п.), которое
+							ввозится как в составе всего производственного комплекса, так и отдельными поставками для различных
+							промышленных и агропромышленных предприятий, а также и для индивидуальных нужд.</p>
+						<p class=" services__text margin-bottom-20">Так же ООО «СЭЗ-Сервис» производит таможенное оформление
+							автокомпонентов, химических материалов, товаров народного потребления, продуктов питания,
+							медицинских препаратов, масел, сырья для производственных компаний и многих других товаров.
+							<strong>По
+								запасным частям компания работает с номенклатурой более 20 тысяч артикулов</strong>.
+						</p>
+						<div class="services__img-box img-box-400 float-right">
+							<img class="services__img" data-src="@img/services/services-img-7-400.jpg" width="400" height="300"
+								alt="фото в офисе">
+						</div>
+						<p class=" services__text margin-bottom-10">На сайте компании <a class="services__link link"
+								href="http://www.sezs.ru" target="_blank">www.sezs.ru</a> вы легко сможете получить очень
+							подробную информацию:
+						</p>
+						<ul class="services__list list margin-bottom-20">
+							<li class="list-item">по вопросам таможенного оформления и законодательства в области ВЭД;</li>
+							<li class="list-item">по подготовке и оформлению документов для таможенных органов;</li>
+							<li class="list-item">о выборе кодов ТН ВЭД ЕАЭС для товаров;</li>
+							<li class="list-item">по размещению товаров на складе временного хранения, проведению
+								предварительных осмотров и дополнительных таможенных процедур.</li>
+						</ul>
+						<p class=" services__text margin-bottom-10">Мы помогаем в прохождении таможенного
+							контроля, включая подтверждение таможенной стоимости товаров, проведения досмотров и наблюдения, а
+							так же содействуем в получении необходимых разрешительных документов: </p>
+						<ul class="services__list list margin-bottom-20">
+							<li class="list-item"><a class="services__link link"
+									href="https://sezs.ru/uslugi/poluchenie-dokumentov/nash-nadezhnyj-i-davnij-partner.html"
+									target="_blank">Но­тифи­кация ФСБ</a>.</li>
+							<li class="list-item"><a class="services__link link"
+									href="https://sezs.ru/uslugi/poluchenie-dokumentov/sertifikat-deklaracija-sootvetstvija-tehnicheskim-reglamentam-tamozhennogo-sojuza.html"
+									target="_blank">Сертификат/декларация соответствия</a> техническим регламентам таможенного
+								союза.</li>
+							<li class="list-item"><a class="services__link link"
+									href="https://sezs.ru/uslugi/poluchenie-dokumentov/zaklyuchenie-fstek.html"
+									target="_blank">Зак­лю­чение ФСТЭК</a> на то­вары двой­но­го при­мене­ния.</li>
+							<li class="list-item"><a class="services__link link"
+									href="https://sezs.ru/uslugi/poluchenie-dokumentov/litsenzirovanie.html"
+									target="_blank">Ли­цен­зи­рова­ние</a> эк­спор­та и им­порта.</li>
+							<li class="list-item"><a class="services__link link"
+									href="https://sezs.ru/uslugi/poluchenie-dokumentov/sertifikaciya.html"
+									target="_blank">Сер­ти­фика­ция</a> им­пор­тной про­дук­ции.</li>
+						</ul>
+					</div>
+					<p class="services__text margin-bottom-50">Доверьте нам
+						таможенное оформление грузов и сосредоточьтесь на своем бизнесе!</p>
+					<h4 class="services__title title margin-bottom-20">Часто задаваемые вопросы</h4>
+					<div data-spollers data-one-spoller class="services__spollers spollers">
+						<details class="spollers__item text">
+							<summary data-spoller-close class="spollers__title">Сколько времени занимает таможенное
+								оформление?</summary>
+							<div class="spollers__body">
+								<p class="spollers__text">Средний срок прохождения таможенного контроля — 1-3 дня.</p>
+							</div>
+						</details>
+						<details class="spollers__item text">
+							<summary data-spoller-close class="spollers__title">Что включает в себя процедура таможенного
+								оформления?</summary>
+							<div class="spollers__body">
+								<p class="spollers__text">Таможенное оформление включает в себя предъявление разрешительной и
+									сопровождающей груз документации, таможенной декларации и уплату таможенных платежей.</p>
+							</div>
+						</details>
+						<details class="spollers__item text">
+							<summary data-spoller-close class="spollers__title">Какие документы требуется собрать?</summary>
+							<div class="spollers__body">
+								<p class="spollers__text">Перечень документации определяется
+									индивидуально. В расчет принимается вид груза и связанные с этим нюансы, место (т.е.
+									терминал), где будет проводиться таможенное оформление. Узнать перечень документов,
+									требуемых для пересечения грузами границы РФ, вы можете <a class="services__link link"
+										href="https://sudact.ru/law/tk-ts/ii/razdel-5/glava-27-tamozhennoe-deklarirovanie-tovarov/statia-183/?ysclid=lxmxgciwp997671564"
+										target="_blank">здесь</a> (перечень,
+									регламентированный ст. 183 ТК ТС).</p>
+							</div>
+						</details>
+						<details class="spollers__item text">
+							<summary data-spoller-close class="spollers__title">Нужно ли оформлять нотификацию или получать
+								заключение на ввоз бытовой техники с Wi-Fi, Bluetooth; р/у моделей и т.д.?</summary>
+							<div class="spollers__body">
+								<p class="spollers__text">Примечанием к разделу 2.19 единого перечня товаров, к которым
+									применяются меры нетарифного регулирования в торговле с третьими странами, утвержденного
+									Решением Коллегии Евразийской экономической комиссии от 21.04.2015 № 30 «О мерах нетарифного
+									регулирования» установлено, что для целей настоящего раздела необходимо руководствоваться как
+									кодом ТН ВЭД ЕАЭС, так и наименованием товара и, следовательно, если классификационный код
+									перемещаемого товара отсутствует в указанном разделе Единого перечня, либо наименование
+									(характеристики перемещаемого товара) отличны от наименования контролируемого товара, товар
+									не относится к категории шифровальных (криптографических) средств, при перемещении которых
+									требуется представление разрешительных документов таможенным органам.</p>
+							</div>
+						</details>
+						<details class="spollers__item text">
+							<summary data-spoller-close class="spollers__title">Каковы процессуальные сроки
+								административного производства?</summary>
+							<div class="spollers__body">
+								<p class="spollers__text margin-bottom-20">В случае проведения административного
+									расследования, его срок составляет один месяц с даты возбуждения дела об административном
+									правонарушении, который может быть продлен до шести месяцев.</p>
+								<p class="spollers__text margin-bottom-20">Протокол об административном правонарушении в
+									течение трех дней после его составления передается лицу, уполномоченному рассматривать
+									дела об административных правонарушениях.</p>
+								<p class="spollers__text margin-bottom-20">Дело об административном правонарушении подлежит
+									рассмотрению в течение пятнадцати дней с момента его получения уполномоченным лицом.
+									Данный срок может быть продлен, но не более, чем на один месяц.</p>
+								<p class="spollers__text">Срок рассмотрения дела в суде составляет не более двух месяцев, со
+									дня его поступления в суд.</p>
+							</div>
+						</details>
+						<details class="spollers__item text">
+							<summary data-spoller-close class="spollers__title">Сколько разрешено вывозить наличных денежных
+								средств из Российской Федерации?</summary>
+							<div class="spollers__body">
+								<p class="spollers__text">В соответствии с Указом Президента Российской Федерации от
+									01.03.2022 № 81 «О дополнительных временных мерах экономического характера по обеспечению
+									финансовой стабильности Российской Федерации» со 2 марта 2022 года введен запрет на вывоз
+									из Российской Федерации наличной иностранной валюты и (или) денежных инструментов в
+									иностранной валюте
+									в сумме, превышающей эквивалент 10 тыс. долларов США по официальному курсу Центрального
+									банка Российской Федерации на дату вывоза.
+								</p>
+							</div>
+						</details>
+						<details class="spollers__item text">
+							<summary data-spoller-close class="spollers__title">Каким образом можно подтвердить факт выпуска
+								товара?</summary>
+							<div class="spollers__body">
+								<p class="spollers__text">Для получения в электронном виде подтверждения факта выпуска
+									товаров на территории Евразийского экономического союза физические и юридические лица
+									могут воспользоваться информационным сервисом «Запрос статуса задекларированного товара»
+									входящего в состав АПС «Личный кабинет» участника ВЭД. Запрос на предоставление информации
+									подписывается электронной подписью после формирования.</p>
+							</div>
+						</details>
+
+					</div>
+				</div>
+			</section>
+			@@include('html/_action-block.htm',{})
+			<section class="about" data-watch="navigator" data-watch-threshold="0.09">
+				<div class="about__container">
+					<h2 class="about__title title">О нас</h2>
+					<article class="about__values margin-bottom-50">
+						<div class="about__values-wrapper">
+							<div class="about__subtitle-box subtitle-box">
+								<svg class="about__icons icons-check">
+									<use xlink:href="@img/icons/icons.svg#check"></use>
+								</svg>
+								<h3 class="about__subtitle subtitle">Наши ценности</h3>
+							</div>
+							<ul class="about__list-values values-list margin-bottom-30">
+
+								<li data-watch data-watch-once data-watch-threshold="0.5"
+									class="values-list__item values-list__item--1 card">
+									<div class="card__top">
+										<div class="card__img-wrapper">
+											<img class="card__icons" width="64" height="64" data-src="@img/icons/card-icon-4.png"
+												alt="иконка">
+										</div>
+										<h4 class="card__title">Честность</h4>
+										<ul class="card__list margin-bottom-40">
+											<li class="card__text-values">Мы честны с клиентами, с сотрудниками и друг с
+												другом.</li>
+											<li class="card__text-values">Мы соблюдаем бизнес-этику.</li>
+											<li class="card__text-values">Мы работаем по законам и правилам.</li>
+										</ul>
+									</div>
+								</li>
+
+								<li data-watch data-watch-once data-watch-threshold="0.5"
+									class="values-list__item values-list__item--2 card">
+									<div class="card__top">
+										<div class="card__img-wrapper">
+											<img class="card__icons" width="64" height="64" data-src="@img/icons/card-icon-4.png"
+												alt="иконка">
+										</div>
+										<h4 class="card__title">Ответственность</h4>
+										</p>
+										<ul class="card__list margin-bottom-40">
+											<li class="card__text-values">Мы отвечаем не только за груз, но и по всем взятым
+												обязательствам.</li>
+											<li class="card__text-values">Мы отвечаем за то, что делаем, а так же за то, что не
+												делаем.</li>
+											<li class="card__text-values">Это наш подход во всех аспектах нашей
+												деятельности.</li>
+										</ul>
+									</div>
+								</li>
+
+								<li data-watch data-watch-once data-watch-threshold="0.5"
+									class="values-list__item values-list__item--3 card">
+									<div class="card__top">
+										<div class="card__img-wrapper">
+											<img class="card__icons" width="64" height="64" data-src="@img/icons/card-icon-4.png"
+												alt="иконка">
+										</div>
+										<h4 class="card__title">Забота</h4>
+										<ul class="card__list margin-bottom-40">
+											<li class="card__text-values">Мы заботимся об интересах клиента.</li>
+											<li class="card__text-values">Мы предугадываем развитие и предлагаем решения, а не
+												ждём.</li>
+											<li class="card__text-values">Мы заботимся о сотрудниках и сотрудники заботятся о
+												компании и друг о друге.</li>
+										</ul>
+									</div>
+								</li>
+
+							</ul>
+						</div>
+					</article>
+				</div>
+				<div class="about__container">
+					<article class="about__story margin-bottom-50">
+						<div class="about__subtitle-box subtitle-box">
+							<svg class="about__icons icons-check">
+								<use xlink:href="@img/icons/icons.svg#check"></use>
+							</svg>
+							<h3 class="about__subtitle subtitle">История компании</h3>
+						</div>
+						<div class="clearfix margin-bottom-40">
+							<div class="about__img-box img-box-400 img-width-400 float-left">
+								<img class="about__img" data-src="@img/about/about-img-1-400.jpg" width="400" height="300"
+									alt="фото автомобилей компании ICT">
+							</div>
+							<p class="about__text margin-bottom-20">История нашей компании начинается в 2001 году, когда
+								Датская
+								компания ICT A/S, будучи дочкой Maersk A/S и GT Spedition A/S, создала подразделение по
+								автомобильным перевозкам из Дании в Россию, куда вошли восемь инициативных сотрудников в Дании,
+								Литве и Москве. Объемы перевозок росли динамично и в 2004 было принято решение открыть филиал
+								ICT
+								A/S в Москве. Так появилось ООО «Ай Си Ти ЛОГИСТИКС» в составе 3-х человек.</p>
+							<p class="about__text margin-bottom-20">В 2006 была зарегистрирована компания ООО «ЕС Транс» -
+								автоперевозчик. В 2008 году в Москве уже было 6 сотрудников, а «ЕС Транс» оперировал 15-ю
+								магистральными автомобилями. В 2010 году открыт офис в Калуге, динамично выросли все показатели:
+								количество клиентов, количество международных перевозок, активность на локальном российском
+								рынке.
+							</p>
+							<div class="about__img-box img-box-400 img-width-400 float-right">
+								<img class="about__img" data-src="@img/about/about-img-2-400.jpg" width="400" height="300"
+									alt="фото автомобилей компании 'ЕС Транс'">
+							</div>
+							<p class="about__text margin-bottom-20">За время работы на российском рынке нашими клиентами были
+								такие компании как John Deere, VOLVO Trucks, Danfoss, Grundfos, Thyssen Krupp, Philips Medical,
+								Novozaims. Наша команда сформировалась в сотрудничестве с этими крупными и требовательными
+								заказчиками, во время работы с которыми мы приобрели бесценный опыт, понимание нужд клиентов,
+								важности своевременного предоставления информации и проактивного подхода.</p>
+							<div class="about__img-box img-box-400 img-width-400 float-left">
+								<img class="about__img" data-src="@img/about/about-img-3-400.jpg" width="400" height="300"
+									alt="фото автомобилей компании 'ЕС Транс'">
+							</div>
+							<p class="about__text margin-bottom-20">Сегодня ООО «ЕС Транс» – член АСМАП, таможенный перевозчик,
+								в
+								основном перевозящий грузы по России и странам СНГ, в международном сообщении перевозим грузы от
+								приграничных Торгово-логистических терминалов до СВХ и конечных грузополучателей как в России,
+								так
+								и странах ЕАЭС.</p>
+							<p class="about__text">ООО «Ай Си Ти ЛОГИСТИКС», в свою очередь, – признанный на
+								Российском рынке международный экспедитор, оказывающий услуги по доставке импортных грузов
+								различными видами транспорта, включая мультимодальные перевозки, перевозки сборных грузов, в том
+								числе с промежуточной консолидацией, перевозки грузов с соблюдением температурного режима и
+								перевозки опасных грузов. Подробную информацию о компаниях ООО «Ай Си Ти ЛОГИСТИКС» и ООО «ЕС
+								Транс» можно посмотреть <a class="services__link link" href="https://es-trans.ru/o-nas/"
+									target="_blank">здесь</a>.</p>
+						</div>
+						<p class="about__text margin-bottom-20">Наш партнёр – компания ООО «СЭЗ-Сервис» оказывает услуги по
+							таможенному оформлению и сертификации с 2006 года. В ней работают профессионалы своего дела,
+							имеющие базовое образование в области химии, автомобилестроения, энергетики и других технических
+							дисциплин.</p>
+							<p class="about__text margin-bottom-20">Вот что ООО «СЭЗ-Сервис» может рассказать о себе.</p>
+						<p class="about__text margin-bottom-10">С нашим участием реализовывались знаковые и
+							инвестиционные проекты в нашей стране:</p>
+						<ul class="about__story-list list-story">
+							<li class="list-story__item margin-bottom-10">завод Фольксваген в Калуге;</li>
+							<li class="list-story__item margin-bottom-10">экспорт и импорт оборудования для Олимпиады в Сочи;</li>
+							<li class="list-story__item margin-bottom-10">чемпионат мира по футболу 2018 в России, с
+								оформлением и получением всех разрешительных документов от государственных контролирующих
+								органов (ФСБ, ФГУП «ГРЧЦ», Роскомнадзор);</li>
+							<li class="list-story__item margin-bottom-10">импорт сложного технологического оборудования для
+								таких компаний как Юнилин (Нижний Новгород), Кроношпан (Уфа), Вольво (Калуга), НЛМК (Калуга),
+								Магна (Дзержинск), Эйр Ликид (Зеленоград, Тюмень, Череповец, Самара, Новокузнецк), Русвинил
+								(Кстово), Русполимет (Кулебаки), Трансмашэнерго (Тихвин), Линде Газ (Балашиха), Эйр Продактс
+								(Азов), «ИКЕА» (Великий Новгород), «ЕВРАЗ» (Новокузнецк), «Хевел» (Новочебоксарск) и многим
+								другим.</li>
+						</ul>
+						<div class="clearfix">
+							<div class="about__img-box img-box-400 float-right">
+								<img class="about__img" data-src="@img/about/about-customs-400.jpg" width="400" height="300"
+									alt="фото таможни">
+							</div>
+							<p class="about__text margin-bottom-10">Мы знаем, как оформлять многокодовые
+								декларации (600 и более кодов ТНВЭД ЕАЭС в ДТ) и понимаем толк в классификации в соответствии с
+								ТНВЭД ЕАЭС сложных химических соединений, многокомпонентных товаров. Определение и подтверждение
+								таможенной стоимости товаров с учетом доначислений и вычетов – это наша тема.</p>
+							<p class="about__text margin-bottom-20">Мы работаем в белом секторе (контрабандными
+								товарами и серым импортом не занимаемся).</p>
+							<p class="about__text margin-bottom-20">Наша специализация – это таможенное оформление
+								автокомпонентов, автозапчастей, оборудования, товаров народного потребления (одежда, обувь),
+								фармацевтики, химии, медицинских препаратов и многих других товарных позиций. Подробную
+								информацию о компании ООО «СЭЗ-Сервис» можно посмотреть <a class="services__link link"
+									href="http://www.sezs.ru" target="_blank">здесь</a>.</p>
+						</div>
+					</article>
+
+					<article class="about__team margin-bottom-50">
+						<div class="about__subtitle-box subtitle-box">
+							<svg class="about__icons icons-check">
+								<use xlink:href="@img/icons/icons.svg#check"></use>
+							</svg>
+							<h3 class="about__subtitle subtitle">Наша команда</h3>
+						</div>
+						<div class="clearfix">
+							<div class="about__img-box img-box-400 img-width-400-225 float-left">
+								<img class="about__img" data-src="@img/about/about-team-400-1.jpg" width="400" height="225"
+									alt="фото коллектива сотрудников">
+							</div>
+							<p class="about__text margin-bottom-20">"Коллектив
+								компании состоит из опытных сотрудников, значительная часть из которых работает в компании с
+								момента
+								создания, а
+								большинство – более 12 лет.</p>
+							<p class="about__text margin-bottom-20">Мы привыкли предоставлять клиентам западноевропейский
+								уровень
+								качества и надежности, и в настоящий момент мы действуем и развиваемся с учетом потребностей
+								рынка
+								и
+								клиентов: оперативно доставлям грузы по России и странам ЕАЭС, расширяем парк автомобилей.</p>
+							<p class="about__text margin-bottom-20">Наша цель – приносить пользу клиентам в решении
+								логистических
+								задач и расти вместе с клиентами."</p>
+							<p class="about__text margin-bottom-20 text-right">Генеральный директор,<br>Сергей Попов.
+							</p>
+						</div>
+					</article>
+				</div>
+				<article class="about__garage">
+					<div class="about__container">
+						<div class="about__subtitle-box subtitle-box">
+							<svg class="about__icons icons-check">
+								<use xlink:href="@img/icons/icons.svg#check"></use>
+							</svg>
+							<h3 class="about__subtitle subtitle">Наш парк</h3>
+						</div>
+						<p class="about__text margin-bottom-30">Парк ООО "ЕС Транс" состоит из 14 тентованных автопоездов.
+							Тягачи
+							Евро 5 и Евро 6 – Mercedes Actros и Foton.</p>
+						<ul class="about__list-garage garage-list margin-bottom-30">
+							<li class="garage-list__item"><img class="about__img" data-src="@img/about/about-park-1-300.jpg"
+									alt="грузовая машина ЕС Транс" width="300" height="400">
+							</li>
+							<li class="garage-list__item"><img class="about__img" data-src="@img/about/about-park-2-300.jpg"
+									alt="грузовая машина ЕС Транс" width="300" height="400">
+							</li>
+							<li class="garage-list__item"><img class="about__img" data-src="@img/about/about-park-3-300.jpg"
+									alt="грузовая машина ЕС Транс" width="300" height="400">
+							</li>
+							<li class="garage-list__item img-width-584"><img class="about__img"
+									data-src="@img/about/about-park-4-584.jpg" alt="грузовая машина ЕС Транс" width="584"
+									height="400">
+							</li>
+						</ul>
+						<p class="about__text margin-bottom-30">Помимо задействования собственного парка, мы работаем с
+							партнерами-перевозчиками, в парке которых насчитывается более 500 машин. Мы используем привлечённые
+							машины для обеспечения поставок по контрактам наших основных заказчиков.</p>
+					</div>
+				</article>
+			</section>
+			@@include('html/_action-block.htm',{})
+			<section class="reviews" id="reviews" data-watch="navigator" data-watch-threshold="0.35">
+				<div class="reviews__container">
+					<h2 class="reviews__title title">Отзывы</h2>
+					<div class="reviews__subtitle-box subtitle-box">
+						<svg class="reviews__icons icons-check">
+							<use xlink:href="@img/icons/icons.svg#check"></use>
+						</svg>
+						<h3 class="reviews__subtitle subtitle">Мы гордимся нашими клиентами!</h3>
+					</div>
+					<ul class="reviews__list list margin-bottom-80">
+						<li class="list__item">
+							<div class="list__item-wrapper list__item-wrapper--1"><img class="list__img" width="342"
+									height="60" data-src="@img/reviews/logo-60/1.png" alt="логотип"></div>
+						</li>
+						<li class="list__item">
+							<div class="list__item-wrapper list__item-wrapper--2"><img class="list__img" width="286"
+									height="60" data-src="@img/reviews/logo-60/2.png" alt="логотип"></div>
+						</li>
+						<li class="list__item">
+							<div class="list__item-wrapper list__item-wrapper--3"><img class="list__img" width="148"
+									height="60" data-src="@img/reviews/logo-60/3.png" alt="логотип"></div>
+						</li>
+						<li class="list__item">
+							<div class="list__item-wrapper list__item-wrapper--4"><img class="list__img" width="60" height="60"
+									data-src="@img/reviews/logo-60/4.png" alt="логотип"></div>
+						</li>
+						<li class="list__item">
+							<div class="list__item-wrapper list__item-wrapper--5"><img class="list__img" width="149"
+									height="60" data-src="@img/reviews/logo-60/5.png" alt="логотип"></div>
+						</li>
+						<li class="list__item">
+							<div class="list__item-wrapper list__item-wrapper--6"><img class="list__img" width="158"
+									height="60" data-src="@img/reviews/logo-60/6.png" alt="логотип"></div>
+						</li>
+						<li class="list__item">
+							<div class="list__item-wrapper list__item-wrapper--7"><img class="list__img" width="87" height="60"
+									data-src="@img/reviews/logo-60/7.png" alt="логотип"></div>
+						</li>
+						<li class="list__item">
+							<div class="list__item-wrapper"><img class="list__img" width="203" height="60"
+									data-src="@img/reviews/logo-60/8.png" alt="логотип"></div>
+						</li>
+					</ul>
+					<div class="reviews__subtitle-box subtitle-box margin-bottom-30">
+						<svg class="reviews__icons icons-check">
+							<use xlink:href="@img/icons/icons.svg#check"></use>
+						</svg>
+						<h3 class="reviews__subtitle subtitle">Клиенты о нас</h3>
+						<div class="reviews__video-box">
+							<img data-src="@img/swipe-left/hand-swipe.gif" width="70" height="35" alt="иконка руки">
+						</div>
+					</div>
+					<!-- Оболочка слайдера -->
+					<div class="reviews__slider swiper margin-bottom-30">
+						<!-- Двигающееся часть слайдера -->
+						<div class="swiper__wrapper swiper-wrapper">
+							<!-- Слайд -->
+							<div class="swiper__slide swiper-slide">
+								<div class="swiper__image">
+									<img class="swiper__img" data-src="@img/reviews/small/Skiold-small.jpg"
+										alt="благодарственное письмо" width="350" height="481">
+								</div>
+								<div class="swiper__label"><a class="swiper__link link" href="#"
+										data-popup="#popup-1">Увеличить</a>
+								</div>
+							</div>
+
+							<div class="swiper__slide swiper-slide">
+								<div class="swiper__image">
+									<img class="swiper__img" data-src="@img/reviews/small/NEXT-small.jpg"
+										alt="благодарственное письмо" width="350" height="481">
+								</div>
+								<div class="swiper__label"><a class="swiper__link link" href="#"
+										data-popup="#popup-2">Увеличить</a>
+								</div>
+							</div>
+
+							<div class="swiper__slide swiper-slide">
+								<div class="swiper__image">
+									<img class="swiper__img" data-src="@img/reviews/small/Metallprofil-small.jpg"
+										alt="благодарственное письмо" width="350" height="481">
+								</div>
+								<div class="swiper__label"><a class="swiper__link link" href="#"
+										data-popup="#popup-3">Увеличить</a>
+								</div>
+							</div>
+
+							<div class="swiper__slide swiper-slide">
+								<div class="swiper__image">
+									<img class="swiper__img" data-src="@img/reviews/small/Spasskie-small.jpg"
+										alt="благодарственное письмо" width="350" height="481">
+								</div>
+								<div class="swiper__label"><a class="swiper__link link" href="#"
+										data-popup="#popup-4">Увеличить</a>
+								</div>
+							</div>
+
+							<div class="swiper__slide swiper-slide">
+								<div class="swiper__image">
+									<img class="swiper__img" data-src="@img/reviews/small/KHPS-small.jpg"
+										alt="благодарственное письмо" width="350" height="481">
+								</div>
+								<div class="swiper__label"><a class="swiper__link link" href="#"
+										data-popup="#popup-5">Увеличить</a>
+								</div>
+							</div>
+
+							<div class="swiper__slide swiper-slide">
+								<div class="swiper__image">
+									<img class="swiper__img" data-src="@img/reviews/small/Kvarta-Stal-small.jpg"
+										alt="благодарственное письмо" width="350" height="481">
+								</div>
+								<div class="swiper__label"><a class="swiper__link link" href="#"
+										data-popup="#popup-6">Увеличить</a>
+								</div>
+							</div>
+
+							<div class="swiper__slide swiper-slide">
+								<div class="swiper__image">
+									<img class="swiper__img" data-src="@img/reviews/small/Danfoss-small.jpg"
+										alt="благодарственное письмо" width="350" height="481">
+								</div>
+								<div class="swiper__label"><a class="swiper__link link" href="#"
+										data-popup="#popup-7">Увеличить</a>
+								</div>
+							</div>
+
+							<div class="swiper__slide swiper-slide">
+								<div class="swiper__image">
+									<img class="swiper__img" data-src="@img/reviews/small/Ridan-small.jpg"
+										alt="благодарственное письмо" width="350" height="481">
+								</div>
+								<div class="swiper__label"><a class="swiper__link link" href="#"
+										data-popup="#popup-8">Увеличить</a>
+								</div>
+							</div>
+
+							<div class="swiper__slide swiper-slide">
+								<div class="swiper__image">
+									<img class="swiper__img" data-src="@img/reviews/small/UNIFOODTECH-small.jpg"
+										alt="благодарственное письмо" width="350" height="481">
+								</div>
+								<div class="swiper__label"><a class="swiper__link link" href="#"
+										data-popup="#popup-9">Увеличить</a>
+								</div>
+							</div>
+
+							<div class="swiper__slide swiper-slide">
+								<div class="swiper__image">
+									<img class="swiper__img" data-src="@img/reviews/small/VEDA-MK-small.jpg"
+										alt="благодарственное письмо" width="350" height="481">
+								</div>
+								<div class="swiper__label"><a class="swiper__link link" href="#"
+										data-popup="#popup-10">Увеличить</a>
+								</div>
+							</div>
+
+							<div class="swiper__slide swiper-slide">
+								<div class="swiper__image">
+									<img class="swiper__img" data-src="@img/reviews/small/Green-small.jpg"
+										alt="благодарственное письмо" width="350" height="481">
+								</div>
+								<div class="swiper__label"><a class="swiper__link link" href="#"
+										data-popup="#popup-11">Увеличить</a>
+								</div>
+							</div>
+
+						</div>
+						<!-- Если нужна пагинация -->
+						<!-- <div class="swiper-pagination"></div> -->
+						<!-- Если нужна навигация (влево/вправо) -->
+						<button type="button" class="swiper-button-prev"></button>
+						<button type="button" class="swiper-button-next"></button>
+					</div>
+				</div>
+			</section>
+			@@include('html/_action-block.htm',{})
+			<section class="contact" data-watch="navigator" data-watch-threshold="0.45">
+				<div class="contact__container">
+					<h2 class="contact__title title">Контакты</h2>
+					<div class="contact__content">
+						<div class="contact__company">
+							<ul class="contact__list list margin-bottom-20">
+								<li class="list__item margin-bottom-20">
+									<p class="list__item-text">ООО «ЕС Транс»</p>
+								</li>
+								<li class="list__item margin-bottom-20">
+									<div class="list__item-wrapper">
+										<span class="list__item-icon _icon-phone-flip"></span><a class="list__item-text link"
+											href="tel:79105994697">+7 (910) 599-46-97</a>
+									</div>
+								</li>
+								<li class="list__item margin-bottom-20">
+									<div class="list__item-wrapper">
+										<span class="list__item-icon _icon-email"></span><a href="mailto:sde@es-trans.pro"
+											class="list__item-text link"> sde@es-trans.pro</a>
+									</div>
+								</li>
+								<li class="list__item margin-bottom-20">
+									<div class="list__item-wrapper location">
+										<span class="list__item-icon list__item-icon-location _icon-location-dot"></span>
+										<p class="list__item-text">Россия, 125315, г. Москва, Ленинградский проспект, д. 80, кор.
+											5, офис 203<br>ОГРН 1065047062574</p>
+									</div>
+								</li>
+								<li class="list__item">
+									<div class="list__item-wrapper location">
+										<span class="list__item-icon _icon-website-full"></span>
+										<p class="list__item-text link"><a href="https://es-trans.ru"
+												target="_blank">www.es-trans.ru</a></p>
+									</div>
+
+								</li>
+							</ul>
+							<p class=" contact__text margin-bottom-20">Для письменного общения пишите нам в мессенджеры:</p>
+							<div class="contact__social">
+								<a class="contact__link-icon" href="whatsapp://send?phone=79105994697" target="_blank">
+									<svg class="icon">
+										<use xlink:href="@img/icons/icons.svg#whatsapp"></use>
+									</svg>
+								</a>
+								<a class="contact__link-icon" href="https://t.me/+79105994697" target="_blank">
+									<svg class="icon">
+										<use xlink:href="@img/icons/icons.svg#telegram"></use>
+									</svg>
+								</a>
+							</div>
+						</div>
+						<div class="contact__map">
+							<iframe
+								data-src="https://yandex.ru/map-widget/v1/?um=constructor%3A9d231bda729e55daf8e0ab7341ed242b99f2c48478d79f506328277b903feb53&amp;source=constructor"></iframe>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		@@include('html/_footer.htm',{})
 	</div>
+	@@include('html/_popup.htm',{})
+	@@include('html/_js.htm',{})
 </body>
-<style>
-	@charset "UTF-8";
-	@import url("https://fonts.googleapis.com/css?family=Montserrat:regular,500,600,700&display=swap");
-
-	*,
-	*::before,
-	*::after {
-		padding: 0px;
-		margin: 0px;
-		border: 0px;
-		box-sizing: border-box;
-	}
-
-	html,
-	body {
-		height: 100%;
-		margin: 0;
-		padding: 0;
-		min-width: 320px;
-		width: 100%;
-		color: #2C2C2C;
-		background-color: #fff;
-	}
-
-	body {
-		font-family: Montserrat;
-		line-height: 1;
-		font-size: 1.3rem;
-	}
-
-	a {
-		color: #2C2C2C;
-		text-decoration: underline;
-		font-weight: 500;
-	}
-
-	a:visited {
-		text-decoration: underline;
-	}
-
-	a:hover {
-		text-decoration: none;
-	}
-
-	ul li {
-		list-style: none;
-	}
-
-	img {
-		vertical-align: top;
-	}
-
-	.wrapper {
-		width: 100%;
-		min-height: 100%;
-		overflow: hidden;
-	}
-
-	.rootpage {
-		padding: 30px;
-		display: flex;
-		flex-direction: column;
-		align-items: flex-start;
-	}
-
-	@media (max-width: 767px) {
-		.rootpage {
-			padding: 30px 15px;
-		}
-	}
-
-	h1 {
-		color: #7D7D7D;
-		font-size: 3rem;
-		margin: 0px 0px 1.25rem 0px;
-	}
-
-	@media (max-width: 767px) {
-		h1 {
-			font-size: 1.85rem;
-			margin: 0px 0px 1.25rem 0px;
-		}
-	}
-
-	h2 {
-		color: #FFCC0D;
-		font-size: 2rem;
-		margin: 0px 0px 1rem 0px;
-	}
-
-	.rootpage__tnx,
-	.rootpage__contacts {
-		color: #fff;
-		font-size: 1rem;
-	}
-
-	.rootpage__info {
-		font-weight: 600;
-	}
-
-	@media (max-width: 767px) {
-		h2 {
-			font-size: 1.125rem;
-			margin: 0px 0px 1rem 0px;
-		}
-	}
-
-	.rootpage__info {
-		line-height: 140%;
-		margin: 0px 0px 1.5rem 0px;
-	}
-
-	.rootpage__list {
-		margin: 0px 0px 2.25rem 1.25rem;
-	}
-
-	.rootpage__list li:not(:last-child) {
-		margin: 0px 0px 15px 0px;
-	}
-
-	.rootpage__contacts,
-	.rootpage__tnx {
-		border-radius: 200px;
-		padding: 20px 65px;
-		line-height: 140%;
-	}
-
-	@media (max-width: 767px) {
-
-		.rootpage__contacts,
-		.rootpage__tnx {
-			border-radius: 40px;
-			padding: 20px;
-		}
-	}
-
-	.rootpage__contacts {
-		background: #0088CC;
-
-	}
-
-	.rootpage__contacts a {
-		color: #FFD641;
-	}
-
-	.rootpage__tnx {
-		background: #32b5a4;
-		margin: 0px 0px 1rem 0px;
-	}
-</style>
 
 </html>

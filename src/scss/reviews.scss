@@ -51,6 +51,10 @@
 }
 
 .swiper {
+	@media (max-width:$mobile) {
+		max-width: 440px;
+	}
+	
    &__label {
       padding-top: 10px;
       text-align: center;
@@ -67,12 +71,13 @@
 
    &__image {
       text-align: center;
-  		aspect-ratio: 350/481;
+		/* aspect-ratio: 350/481; */
 		overflow: hidden;
    }
 
    &__img {
       width: 100%;
+		max-width: 350px;
       height: auto;
       object-fit: cover;
    }
@@ -86,7 +91,7 @@
 .swiper-button-next,
 .swiper-button-prev {
    position: absolute;
-   top: 41%;
+   top: 47%;
    width: calc(var(--swiper-navigation-size) / 44 * 27);
    height: var(--swiper-navigation-size);
    margin-top: calc(0px - (var(--swiper-navigation-size) / 2));

@@ -30,5 +30,5 @@ if (document.querySelector('.form-button')) {  // Проверяем налич�
 
 // Переключение на страницу благодарности после отправки формы
 document.addEventListener('formSent', function (event) {
-	location = 'https://sales-manager.es-trans.ru/thank-you-page-2.html';
+	location = 'https://customs.es-trans.ru/thank-you-page-2.html';
 }, false);
